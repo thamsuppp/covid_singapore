@@ -29,7 +29,8 @@ residence_longitudes = df['residence_longitude'].dropna().tolist()
 centroid_latitude = 1.360085
 centroid_longitude = 103.818654
 
-
+# Hover text
+df['hover_text'] = 'Case ' + df['case_num'].astype(str) + '<br /> ' + df['date_confirmed'] + '<br /> ' + df['residence']
 
 ### CALLBACK 1: From text input, calls PWBM and FRED Search API and sets the dropdown options for user to select variable to visualize
 @app.callback(
@@ -45,14 +46,20 @@ def set_display_text(search_button, input_value):
 
 @app.callback(
     Output('map', 'figure'),
-    [Input('search_button', 'n_clicks')])
-def draw_map_scatterplot(search_button):
+    [Input('search_button', 'n_clicks'),
+    Input('datatable', 'selected_rows')])
+def draw_map_scatterplot(search_button, datatable_selected_rows):
+
+    print(datatable_selected_rows)
+
+    # Filter by selected rows
+    df_subset = df.iloc[datatable_selected_rows, :]
 
     data = [go.Scattermapbox(
-            lat = residence_latitudes, 
-            lon= residence_longitudes, 
+            lat = df_subset['residence_latitude'], 
+            lon= df_subset['residence_longitude'], 
             mode='markers', 
-            text = 'Text', 
+            text = df_subset['hover_text'], 
             hoverinfo='text', 
             name= 'COVID Cases')]
 
@@ -66,7 +73,7 @@ def draw_map_scatterplot(search_button):
                     'accesstoken': mapbox_access_token, 
                     'bearing': 0, 
                     'center': {'lat': centroid_latitude, 'lon': centroid_longitude}, 
-                    'pitch': 0, 'zoom': 11,
+                    'pitch': 0, 'zoom': 10,
                     #"style": 'mapbox://styles/mapbox/streets-v11'
                     }
                 )

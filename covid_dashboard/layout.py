@@ -33,8 +33,8 @@ layout = html.Div([
             'maxHeight': '300px',
             'overflowX': 'scroll'},
         sort_action = 'native',
-        filter_action = 'native',
         row_selectable = 'multi',
+        selected_rows = [i for i in range(0, len(df))],
         hidden_columns = ['residence_latitude', 'residence_longitude']
     ),
 
