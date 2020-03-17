@@ -9,10 +9,10 @@ import pandas as pd
 df = pd.read_csv('sg_covid_cases.csv')
 
 # Check the number of days between today and first day
-df['date_confirmed'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+df['date_confirmed_dt'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
 
-max_date = df['date_confirmed'].max()
-min_date = df['date_confirmed'].min()
+max_date = df['date_confirmed_dt'].max()
+min_date = df['date_confirmed_dt'].min()
 n_days = (max_date - min_date).days + 1
 
 
@@ -26,7 +26,8 @@ layout = html.Div([
         html.Div(children = 'Singapore', id = 'output'),
         dcc.Store(id = 'database')
     ]),
-
+    html.Div(id = 'filler'),
+    html.Button('Print DF', id = 'print_df_button'),
 
     dash_table.DataTable(
         id = 'datatable',
@@ -42,11 +43,11 @@ layout = html.Div([
         sort_action = 'native',
         row_selectable = 'multi',
         selected_rows = [i for i in range(0, len(df))],
-        hidden_columns = ['residence_latitude', 'residence_longitude']
+        hidden_columns = ['residence_latitude', 'residence_longitude', 'date_confirmed_dt']
     ),
 
     html.Div([
-        html.Div(children = max_date, id = 'date_slider_display'),
+        html.Div(children = datetime.strftime(max_date, '%Y-%m-%d'), id = 'date_slider_display'),
         dcc.Slider(id = 'date_slider', min = 0, max = n_days, step = 1, value = n_days)
     ]),
 
