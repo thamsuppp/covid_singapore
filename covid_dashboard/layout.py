@@ -11,6 +11,9 @@ df = pd.read_csv('sg_covid_cases.csv')
 # Check the number of days between today and first day
 df['date_confirmed_dt'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
 
+# Change is_imported to Origin
+df['origin'] = df['is_imported'].apply(lambda x: 'Imported' if x is True else 'Local')
+
 max_date = df['date_confirmed_dt'].max()
 min_date = df['date_confirmed_dt'].min()
 n_days = (max_date - min_date).days + 1
@@ -29,9 +32,48 @@ layout = html.Div([
     html.Div(id = 'filler'),
     html.Button('Print DF', id = 'print_df_button'),
 
+    html.Div(
+        [html.Div(children = '', id = 'age_range_slider_display'),
+        dcc.RangeSlider(
+            id = 'age_range_slider',
+            min = df['age'].min(),
+            max = df['age'].max(),
+            step = 1,
+            value = [df['age'].min(), df['age'].max()]
+        ),
+            
+        dcc.Checklist(
+            id = 'gender_checklist',
+            options = [{'label': 'Male', 'value': 'M'},
+                        {'label': 'Female', 'value': 'F'}],
+            value = ['M', 'F']),
+        dcc.Checklist(
+            id = 'origin_checklist',
+            options = [{'label': 'Imported', 'value': 'Imported'},
+                        {'label': 'Local', 'value': 'Local'}],
+            value = ['Imported', 'Local']),
+        dcc.Dropdown(
+            id = 'nationality_dropdown',
+            options = [{'label': e, 'value': e} for e in df['nationality'].unique()],
+            multi = True,
+            value = []
+        )
+        ]
+    ),
+
     dash_table.DataTable(
         id = 'datatable',
-        columns = [{'name': i, 'id': i} for i in df.columns],
+        columns = [{'name': 'No.', 'id': 'case_num'},
+                {'name': 'Age', 'id': 'age'},
+                {'name': 'Gender', 'id': 'gender'},
+                {'name': 'Hospital', 'id': 'hospital'},
+                {'name': 'Date Confirmed', 'id': 'date_confirmed'},
+                {'name': 'Origin', 'id': 'origin'},
+                {'name': 'Nationality', 'id': 'nationality'},
+                {'name': 'Residence', 'id': 'residence'},
+                {'name': 'Address', 'id': 'residence_address'},
+                {'name': 'Places Visited', 'id': 'places_visited'}
+                ],
         data = df.to_dict('records'),
         style_data = {
             'whiteSpace': 'normal',

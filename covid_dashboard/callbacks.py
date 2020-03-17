@@ -71,6 +71,15 @@ def set_date_slider_display_text(date_slider_value):
     # Convert slider value to date
     return datetime.strftime((max_date - timedelta(days = (n_days - date_slider_value))), '%Y-%m-%d')
 
+### CALLBACK : Sets the displays of the age range slider
+@app.callback(
+    Output('age_range_slider_display', 'children'),
+    [Input('age_range_slider', 'value')]
+)
+def set_age_range_slider_display_text(age_range_slider_value):
+
+    return 'Age Range: {} to {} Years'.format(age_range_slider_value[0], age_range_slider_value[1])
+
 
 ### CALLBACK 2: Draws the map
 
