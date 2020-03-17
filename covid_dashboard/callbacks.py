@@ -8,7 +8,7 @@ import dash_table
 import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
-from datetime import datetime, date, time
+from datetime import datetime, date, time, timedelta
 import io
 import flask
 import json
@@ -26,11 +26,19 @@ df = pd.read_csv('sg_covid_cases.csv')
 residence_latitudes = df['residence_latitude'].dropna().tolist()
 residence_longitudes = df['residence_longitude'].dropna().tolist()
 
+# Hover text
+df['hover_text'] = 'Case ' + df['case_num'].astype(str) + '<br /> ' + df['date_confirmed'] + '<br /> ' + df['residence']
+
+# Check the number of days between today and first day
+df['date_confirmed'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
+
+max_date = df['date_confirmed'].max()
+min_date = df['date_confirmed'].min()
+n_days = (max_date - min_date).days + 1
+
 centroid_latitude = 1.360085
 centroid_longitude = 103.818654
 
-# Hover text
-df['hover_text'] = 'Case ' + df['case_num'].astype(str) + '<br /> ' + df['date_confirmed'] + '<br /> ' + df['residence']
 
 ### CALLBACK 1: From text input, calls PWBM and FRED Search API and sets the dropdown options for user to select variable to visualize
 @app.callback(
@@ -41,19 +49,35 @@ def set_display_text(search_button, input_value):
 
     return input_value
 
+### CALLBACK : Sets the display of the date slider
+@app.callback(
+    Output('date_slider_display', 'children'),
+    [Input('date_slider', 'value')]
+)
+def set_date_slider_display_text(date_slider_value):
+
+    # Convert slider value to date
+    return max_date - timedelta(days = (n_days - date_slider_value))
+
 
 ### CALLBACK 2: Draws the map
 
 @app.callback(
     Output('map', 'figure'),
     [Input('search_button', 'n_clicks'),
+    Input('date_slider_display', 'children'),
     Input('datatable', 'selected_rows')])
-def draw_map_scatterplot(search_button, datatable_selected_rows):
+def draw_map_scatterplot(search_button, date_slider_display, datatable_selected_rows):
 
     print(datatable_selected_rows)
 
+    end_date = datetime.strptime(date_slider_display, '%Y-%m-%d')
+
     # Filter by selected rows
     df_subset = df.iloc[datatable_selected_rows, :]
+
+    # Filter by date
+    df_subset = df_subset.loc[df_subset['date_confirmed'] <= end_date]
 
     data = [go.Scattermapbox(
             lat = df_subset['residence_latitude'], 
