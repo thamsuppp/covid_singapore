@@ -30,7 +30,10 @@ layout = html.Div([
         dcc.Store(id = 'database')
     ]),
     html.Div(id = 'filler'),
+    html.Div(id = 'filler2'),
+    dcc.Store(id = 'database_subset'),
     html.Button('Print DF', id = 'print_df_button'),
+    html.Button('Print DB Subset', id = 'print_database_subset_button'),
 
     html.Div(
         [html.Div(children = '', id = 'age_range_slider_display'),
@@ -74,7 +77,7 @@ layout = html.Div([
                 {'name': 'Address', 'id': 'residence_address'},
                 {'name': 'Places Visited', 'id': 'places_visited'}
                 ],
-        data = df.to_dict('records'),
+        data = [],
         style_data = {
             'whiteSpace': 'normal',
             'height': 'auto'
@@ -83,8 +86,6 @@ layout = html.Div([
             'maxHeight': '300px',
             'overflowX': 'scroll'},
         sort_action = 'native',
-        row_selectable = 'multi',
-        selected_rows = [i for i in range(0, len(df))],
         hidden_columns = ['residence_latitude', 'residence_longitude', 'date_confirmed_dt']
     ),
 
