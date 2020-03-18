@@ -91,8 +91,16 @@ layout = html.Div([
 
     html.Div([
         html.Div(children = datetime.strftime(max_date, '%Y-%m-%d'), id = 'date_slider_display'),
-        dcc.Slider(id = 'date_slider', min = 0, max = n_days, step = 1, value = n_days)
-    ]),
+        dcc.Slider(id = 'date_slider', 
+                    min = 0, max = n_days, step = 1, value = 1,
+                    updatemode = 'drag'),
+        html.Button('Play', id = 'animation_play_pause_button'),
+        dcc.Interval(id='date_slider_interval', interval = 1 * 1000, disabled=True),
+        html.Div(id='date_slider_value_store', style={'display': 'none'}),
+        html.Div(
+            [html.Div('Speed'),
+             dcc.Slider(id='animation_speed_slider', min=1, max=5, step=1, value=1)])
+            ]),
 
     html.Div(dcc.Graph(id='map'))
 

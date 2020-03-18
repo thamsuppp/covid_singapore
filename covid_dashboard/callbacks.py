@@ -109,27 +109,19 @@ def filter_database(date_slider_display, age_range_slider_value,
     gender_checklist_value, origin_checklist_value, nationality_dropdown_value):
 
     end_date = datetime.strptime(date_slider_display, '%Y-%m-%d')
-
     # Filter by date - starting point is original DF
     df_subset = df.loc[df['date_confirmed_dt'] <= end_date]
-
     # Filter by age range
     df_subset = df_subset.loc[(df_subset['age'] >= age_range_slider_value[0]) & 
     (df_subset['age'] <= age_range_slider_value[1]), :]
-
     # Filter by gender
     df_subset = df_subset.loc[df_subset['gender'].apply(lambda x: x in gender_checklist_value), :]
-
     # Filter by origin
     df_subset = df_subset.loc[df_subset['origin'].apply(lambda x: x in origin_checklist_value), :]
-
     # Filter by nationality
     df_subset = df_subset.loc[df_subset['nationality'].apply(lambda x: x in nationality_dropdown_value), :]
-
     # Get days before end_date
     df_subset['days_before_now'] = (end_date - df_subset['date_confirmed_dt']).apply(lambda x: -x.days)
-
-    print('FILTER DATABASE TEST')
 
     return df_subset.to_json()
 
@@ -140,10 +132,7 @@ def filter_database(date_slider_display, age_range_slider_value,
 )
 def update_datatable(df_subset):
 
-    print('UPDATE DATATABLE STEST')
-
     df_subset = json_to_df(df_subset)
-
     datatable_data = df_subset.to_dict('records')
 
     return datatable_data
@@ -185,3 +174,46 @@ def draw_map_scatterplot(df_subset):
                 )
             }
 
+
+### CALLBACK : Animates the map by incrementing the date at regular intervals
+@app.callback(
+    Output('date_slider', 'value'),
+    [Input('date_slider_interval', 'n_intervals')],
+    [State('date_slider', 'value'),
+     State('date_slider', 'max'),
+     State('date_slider', 'min')]
+)
+def animate_map(n_intervals, slider_value, slider_max, slider_min):
+    if ctx.triggered[0]['prop_id'] == 'date_slider_value_store.children':
+        return 0
+    else:
+        if slider_value >= slider_max:
+            return slider_min
+        else:
+            return slider_value + 1
+
+#CALLBACK 7.3: Enables or disables the interval timer when the play/pause button is activated respectively
+@app.callback(
+    [Output('date_slider_interval', 'disabled'),
+     Output('animation_play_pause_button', 'children')],
+    [Input('animation_play_pause_button', 'n_clicks')],
+    [State('date_slider_interval', 'disabled')]
+)
+def play_pause_animation(play_pause_button, is_disabled):
+    if ctx.triggered == []:
+        return True, 'Play'
+    #If play/pause button is pressed
+    elif ctx.triggered[0]['prop_id'].split('.')[0] == 'animation_play_pause_button':
+        if is_disabled == True:
+            return (not is_disabled), 'Pause'
+        else:
+            return (not is_disabled), 'Play'
+
+# CALLBACK 7.4: Changes animation speed depending on animation speed slider
+@app.callback(
+    Output('date_slider_interval', 'interval'),
+    [Input('animation_speed_slider', 'value')]
+)
+def change_animation_speed(slider_value):
+    interval = (12.5 - 2 * slider_value) * 100
+    return interval
