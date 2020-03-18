@@ -67,14 +67,6 @@ def print_database_subset(n_clicks, database_subset):
     print(database_subset)
     return None
 
-### Tese Callback: From text input, calls PWBM and FRED Search API and sets the dropdown options for user to select variable to visualize
-@app.callback(
-    Output('output', 'children'),
-    [Input('search_button', 'n_clicks')],
-    [State('input', 'value')])
-def set_display_text(search_button, input_value):
-
-    return input_value
 
 ### CALLBACK : Sets the display of the date slider
 @app.callback(
@@ -95,6 +87,19 @@ def set_age_range_slider_display_text(age_range_slider_value):
 
     return 'Age Range: {} to {} Years'.format(age_range_slider_value[0], age_range_slider_value[1])
 
+### CALLBACK : Selects all nationalities if the checkbox is checked
+@app.callback(
+    Output('nationality_dropdown', 'value'),
+    [Input('select_all_nationality_checklist', 'value')]
+)
+def set_all_nationality_dropdown(checkbox_value):
+    print(checkbox_value)
+    if checkbox_value == ['All']:
+        return [{'label': e, 'value': e} for e in df['nationality'].unique()]
+
+    else:
+        return []
+
 
 ### CALLBACK 1: Filters the original database to form database_subset
 @app.callback(
@@ -108,6 +113,8 @@ def set_age_range_slider_display_text(age_range_slider_value):
 def filter_database(date_slider_display, age_range_slider_value,
     gender_checklist_value, origin_checklist_value, nationality_dropdown_value):
 
+    selected_nationalities = [e['value'] for e in nationality_dropdown_value]
+
     end_date = datetime.strptime(date_slider_display, '%Y-%m-%d')
     # Filter by date - starting point is original DF
     df_subset = df.loc[df['date_confirmed_dt'] <= end_date]
@@ -119,7 +126,7 @@ def filter_database(date_slider_display, age_range_slider_value,
     # Filter by origin
     df_subset = df_subset.loc[df_subset['origin'].apply(lambda x: x in origin_checklist_value), :]
     # Filter by nationality
-    df_subset = df_subset.loc[df_subset['nationality'].apply(lambda x: x in nationality_dropdown_value), :]
+    df_subset = df_subset.loc[df_subset['nationality'].apply(lambda x: x in selected_nationalities), :]
     # Get days before end_date
     df_subset['days_before_now'] = (end_date - df_subset['date_confirmed_dt']).apply(lambda x: -x.days)
 
@@ -160,10 +167,11 @@ def draw_map_scatterplot(df_subset):
 
     return {"data": data,
             "layout": go.Layout(
-                autosize=True, 
+                height = 800,
+                width = 1200,
+
                 hovermode='closest', 
                 showlegend=False, 
-                height=700,
                 mapbox={
                     'accesstoken': mapbox_access_token, 
                     'bearing': 0, 

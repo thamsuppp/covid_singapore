@@ -5,7 +5,7 @@ import dash_table
 from datetime import datetime, date, time, timedelta
 import pandas as pd
 
-# Read CSV
+# Read Cases
 df = pd.read_csv('sg_covid_cases.csv')
 
 # Check the number of days between today and first day
@@ -23,12 +23,7 @@ n_days = (max_date - min_date).days + 1
 layout = html.Div([
     html.Div([html.H1("Singapore COVID-19 Cases")],
              style={'textAlign': "center", "padding-bottom": "10", "padding-top": "10"}),
-    html.Div([
-        dcc.Input(id = 'input', placeholder = 'Search...'),
-        html.Button('Search', id = 'search_button'),
-        html.Div(children = 'Singapore', id = 'output'),
-        dcc.Store(id = 'database')
-    ]),
+    dcc.Store(id = 'database'),
     html.Div(id = 'filler'),
     html.Div(id = 'filler2'),
     dcc.Store(id = 'database_subset'),
@@ -59,7 +54,12 @@ layout = html.Div([
             id = 'nationality_dropdown',
             options = [{'label': e, 'value': e} for e in df['nationality'].unique()],
             multi = True,
-            value = []
+            value = [{'label': e, 'value': e} for e in df['nationality'].unique()]
+        ),
+        dcc.Checklist(
+            id = 'select_all_nationality_checklist',
+            options =[{'label': 'All Nationalities', 'value': 'All'}],
+            value = ['All']
         )
         ]
     ),
@@ -82,27 +82,54 @@ layout = html.Div([
             'whiteSpace': 'normal',
             'height': 'auto'
         },
+        style_cell = {
+            'whiteSpace': 'normal'
+        },
+        style_cell_conditional = [
+            {'if': {'column_id': 'case_num'},
+            'width': '60px'},
+            {'if': {'column_id': 'hospital'},
+            'width': '75px'},
+            {'if': {'column_id': 'nationality'},
+            'width': '100px'},
+            {'if': {'column_id': 'residence'},
+            'width': '200px'},
+            {'if': {'column_id': 'residence_address'},
+            'width': '200px'},
+            {'if': {'column_id': 'places_visited'},
+            'width': '200px'}
+        ],
         style_table = {
-            'maxHeight': '300px',
+            'height': '300px',
             'overflowX': 'scroll'},
         sort_action = 'native',
-        hidden_columns = ['residence_latitude', 'residence_longitude', 'date_confirmed_dt']
+        #hidden_columns = ['residence_latitude', 'residence_longitude', 'date_confirmed_dt']
     ),
 
     html.Div([
-        html.Div(children = datetime.strftime(max_date, '%Y-%m-%d'), id = 'date_slider_display'),
-        dcc.Slider(id = 'date_slider', 
-                    min = 0, max = n_days, step = 1, value = 1,
-                    updatemode = 'drag'),
-        html.Button('Play', id = 'animation_play_pause_button'),
-        dcc.Interval(id='date_slider_interval', interval = 1 * 1000, disabled=True),
-        html.Div(id='date_slider_value_store', style={'display': 'none'}),
-        html.Div(
-            [html.Div('Speed'),
-             dcc.Slider(id='animation_speed_slider', min=1, max=5, step=1, value=1)])
-            ]),
 
-    html.Div(dcc.Graph(id='map'))
+        html.Div([
+            html.Div(children = datetime.strftime(max_date, '%Y-%m-%d'), id = 'date_slider_display'),
+            dcc.Slider(id = 'date_slider', 
+                        min = 0, max = n_days, step = 1, value = 1,
+                        updatemode = 'drag')
+            ],
+            style=dict(width='1%', display='table-cell', verticalAlign="middle",
+                padding='0px')),
+
+        html.Div([
+            html.Button('Play', id = 'animation_play_pause_button'),
+            dcc.Interval(id='date_slider_interval', interval = 1 * 1000, disabled=True),
+            html.Div(id='date_slider_value_store', style={'display': 'none'}),
+            html.Div('Speed'),
+            dcc.Slider(id='animation_speed_slider', min=1, max=5, step=1, value=1)],
+            style={})
+        ]),
+
+    html.Div(dcc.Graph(id='map'),
+        style={'width': '1200px',
+                'height': '800px',
+                'padding-right': '100px'})
 
 ], className="container")
 
