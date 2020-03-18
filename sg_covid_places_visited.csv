@@ -1,0 +1,432 @@
+case_num,places_visited_list,place_latitude,place_longitude
+1,,,
+2,Raffles Hospital,1.3011904,103.8572692
+2,Tan Tock Seng Emergency Department,1.3213889,103.8458333
+2,Orchard Road,1.301674,103.8380766
+2,Marina Bay Sands,1.2838167,103.8596113
+2,Gardens by the Bay,1.2815683,103.8636132
+3,,,
+4,USS,1.2540421,103.8238084
+4,Vivocity,1.2644032,103.8222071
+5,Tan Tock Seng Hospital,1.3213889,103.8458333
+6, ,1.352083,103.819836
+7,Raffles Hospital,1.3011904,103.8572692
+8,Tan Tock Seng Hospital,1.3213889,103.8458333
+8,The Life Church and Missions Singapore (146B Paya Lebar Road),1.3279884,103.8907116
+9,Tan Tock Seng Hospital,1.3213889,103.8458333
+9,The Life Church and Missions Singapore (146B Paya Lebar Road),1.3279884,103.8907116
+10,Marina South Pier,1.2709749,103.8634616
+11,,,
+12,Orchard Road,1.301674,103.8380766
+12,Geylang,1.3200544,103.8917746
+12,Tan Tock Seng Hospital,1.3213889,103.8458333
+13,Changi Airport,1.3644202,103.9915308
+13,Jewel,1.3601252,103.9897429
+14,,,
+15,,,
+16,Singapore General Hospital,1.2804242,103.8348123
+17,,,
+18,,,
+19,Yong Thai Hang (24 Cavan Road),1.3109474,103.8617098
+19,Tan Tock Seng Hospital Emergency Department,1.3217122,103.8463545
+20,Yong Thai Hang (24 Cavan Road),1.3109474,103.8617098
+21,,,
+22,,,
+23,,,
+24,Yong Thai Hang 24 Cavan Road,1.3109474,103.8617098
+24,Hougang Polyclinic,1.3699653,103.8893269
+24,Jalan Besar,1.3085035,103.8573175
+25,Hougang Polyclinic,1.3699653,103.8893269
+25,Diamond Industries Jewellery Company (Harbour Drive),1.2830306,103.7794074
+25,Pasir Panjang Hawker Centre,1.275969,103.7912521
+26,,,
+27,Tiong Bahru Plaza,1.2864763,103.8271508
+27,Tiong Bahru Market,1.2847477,103.832479
+27,Beo Crescent Market and Food Centre,1.2888084,103.8273668
+28,,,
+29,,,
+30,Far East Square (19 China Street),1.2831684,103.8480136
+30,Junction 8 (9 Bishan Place),1.3506808,103.8487631
+30,Grand Hyatt Singapore,1.3064928,103.8333124
+31,Malaysia,,
+31,The Life Church and Missions Singapore (146B Paya Lebar Road),1.3279884,103.8907116
+32,Victoria Junior College,1.3062353,103.9193881
+32,Parkway East Hospital,1.3150433,103.9089093
+32,Changi Airport,1.3644202,103.9915308
+32,Singapore Zoo,1.4043485,103.793023
+33,Malaysia,,
+33,Sengkang General Hospital Emergency Department,1.395493,103.893403
+34,Yong Thai Hang,1.3109474,103.8617098
+35,Redhill Market,1.2876088,103.8185078
+35,Hawker centre at Bukit Merah,1.2835258,103.8173753
+35,Bukit Merah Polyclinic,1.2837189,103.8171087
+36,Johor Bahru,,
+36,KK Women's and Children's Hospital (KKH),1.3108033,103.8468722
+36,Grand Hyatt Singapore,1.3064928,103.8333124
+36,Ng Teng Fong General Hospital (NTFGH),1.3337448,103.7453915
+37,Ng Teng Fong General Hospital (NTFGH),1.3337448,103.7453915
+38,Choa Chua Kang Polyclinic,1.38236,103.7508299
+38,The Life Church and Missions Singapore,1.3279884,103.8907116
+38,Marina Bay Sands,1.2838167,103.8596113
+38,Chinatown,1.2814942,103.8448202
+38,Plaza Singapura,1.3000542,103.8451024
+39,Malaysia,,
+39,Grand Hyatt Singapore,1.3064928,103.8333124
+40,Yong Thai Hang,1.3109474,103.8617098
+41,Hougang Polyclinic,1.3699653,103.8893269
+41,Tan Tock Seng Hospital Emergency Department,1.3217122,103.8463545
+41,Paya Lebar Methodist Church (5 Boundary Road),1.352642,103.8757218
+41,Braddell Heights Residents' Committee,1.351125,103.869333
+41,Pat's Schoolhouse Kovan (755 Upper Serangoon Road),1.3543589,103.8780602
+42,Changi General Hospital,1.3401915,103.9495701
+42,Bedok Polyclinic,1.3269794,103.9318285
+42,Mustafa Centre (145 Syed Alwi Road),1.3098393,103.8556006
+42,8 Seletar Aerospace Heights,1.4061415,103.8646565
+43,Malaysia,,
+43,Resorts World Sentosa,1.255179,103.8218107
+44,Certis Cisco Centre (20 Jalan Afifi),1.3217706,103.8922411
+44,Chingay 2020,,
+45,,,
+46,Resort World Sentosa Casino (8 Sentosa Gateway),1.255992,103.8203643
+46,Tan Tock Seng Hospital,1.3213889,103.8458333
+47,8 Seletar Aerospace Heights,1.4061415,103.8646565
+48,Malaysia,,
+48,Plaza Singapura (68 Orchard Road),1.3000542,103.8451024
+48,Star Vista (1 Vista Exchange Green),1.3067999,103.7883907
+48,Fusionopolis (1 Fusionopolis Place),1.2992649,103.7888364
+48,Grace Assembly of God (Tanglin) (355 Tanglin Road),1.2943039,103.8163171
+48,Grace Assembly of God (Bukit Batok) (1 Bukit Batok West Avenue 4),1.3648338,103.7474195
+49,Grace Assembly of God (Tanglin),1.2943039,103.8163171
+49,Grace Assembly of God (Bukit Batok),1.3648338,103.7474195
+50,DBS Asia Central at Marina Bay Financial Centre (12 Marina Boulevard),1.2798179,103.8551022
+51,Grace Assembly of God (Tanglin),1.2943039,103.8163171
+51,Grace Assembly of God (Bukit Batok),1.3648338,103.7474195
+52,8 Seletar Aerospace Heights,1.4061415,103.8646565
+52,Tan Tock Seng Hospital,1.3213889,103.8458333
+53,Grace Assembly of God,1.2943039,103.8163171
+53,National University of Singapore,1.2966426,103.7763939
+54,Grace Assembly of God (Tanglin) (355 Tanglin Road),1.2943039,103.8163171
+55,Pulau Bukom,1.234572,103.7622268
+55,Church of Christ the King (2221 Ang Mo Kio Avenue 8),1.361963,103.8525437
+56,Seletar Aerospace Heights Construction Site,1.4055749,103.8656913
+56,Tan Tock Seng Hospital,1.3213889,103.8458333
+56,Government quarantine facility,1.3752147,103.9967054
+57,Grace Assembly of God (Tanglin),1.2943039,103.8163171
+57,Grace Assembly of God (Bukit Batok),1.3648338,103.7474195
+58,Grace Assembly of God (Tanglin),1.2943039,103.8163171
+58,Grace Assembly of God (Bukit Batok),1.3648338,103.7474195
+59,Farrer Park Hospital Emergency Care Clinic,1.3130812,103.8542173
+59,Mount Elizabeth Hospital Emergency Department,1.3055915,103.8354837
+60,Grace Assembly of God (Tanglin),1.2943039,103.8163171
+61,Ng Teng Fong General Hospital,1.3337448,103.7453915
+61,Pioneer Polyclinic,1.3385247,103.6990003
+61,Legacy Office Supplies Pte Ltd (56 Senang Crescent),1.3282333,103.9169837
+62,,,
+63,PUB,1.3349962,103.7574981
+63,Marisson Hotel Bugis (103 Beach Road),1.2978267,103.8571777
+64,Taxi Driver,1.2878241,103.8484195
+65,Church of Christ the King (2221 Ang Mo Kio Avenue 8),1.361963,103.8525437
+66,Grace Assembly of God,1.2943039,103.8163171
+66,God's Kingdom Bread of Life Church (37 Jalan Pemimpin),1.3488298,103.8411433
+67,Grace Assembly of God (Bukit Batok),1.3648338,103.7474195
+67,Ng Teng Fong General Hospital,1.3337448,103.7453915
+67,NUH,1.2937278,103.7831756
+68,Bethany Presbyterian Church (344A Paya Lebar Road),1.3483116,103.8807979
+69,Government quarantine facility,1.3752147,103.9967054
+70,God's Kingdom Bread of Life Church (37 Jalan Pemimpin),1.3488298,103.8411433
+70,HipVan Singapore (19 Kallang Avenue),1.3109926,103.8652162
+71,Fernvale Lane,1.3894612,103.8708423
+71,God's Kingdom Bread of Life (37 Jalan Pemimpin),1.3488298,103.8411433
+72,Marina Bay Sands Casino (10 Bayfront Avenue),1.282302,103.8585308
+72,Aim Heng Car Services Pte Ltd (Woodlands Industrial Park),1.4485624,103.7969228
+73,Grace Assembly of God (Tanglin) (355 Tanglin Road),1.2943039,103.8163171
+74,Alexandra Hospital Urgent Care Centre,1.2865882,103.8012749
+74,Hi-Yew Technology Pte Ltd (3031A Ubi Road),1.3300162,103.8974108
+75,,,
+76,,,
+77,Tan Tock Seng Hospital,1.3213889,103.8458333
+78,VWO-run Community Hospital,,
+79,FoodXchange@Admiralty (8A Admiralty Street),1.4630224,103.8141823
+80,National University Hospital,1.2937278,103.7831756
+81,,,
+82,Ng Teng Fong General Hospital,1.3337448,103.7453915
+82,Jurong Polyclinic,1.3497921,103.730619
+83,Philemon Singapore Pte Ltd (16 Kallang Place),1.302908,103.864945
+83,Malaysia,,
+84,Lonza Biologics (35 Tuas South Avenue 6),1.2990355,103.6397357
+84,Bugis Junction,1.2988889,103.8555556
+85,Khoo Teck Puat Hospital,1.4245534,103.8381574
+86,,,
+87,,,
+88,,,
+89,Affinity Equity Partners (8 Temasek Boulevard),1.295101,103.859833
+89,Bishan Community Club (51 Bishan St 13),1.3497251,103.8507226
+90,Tan Tock Seng Hospital,1.3213889,103.8458333
+91,,,
+92,,,
+93,,,
+94,,,
+95,Sport Singapore (3 Stadium Drive),1.3030835,103.8751454
+95,Singapore Aviation Academy (1 Aviation Drive),1.3881228,103.9901271
+95,Toa Payoh Hub (490 Lorong 6 Toa Payoh),1.3325736,103.8484186
+95,Toa Payoh Sport Centre (297 Lorong 6 Toa Payoh),1.3308701,103.852472
+96,Raffles Institution,1.3466753,103.8434229
+97,Wizlearn Technologies Pte Ltd,1.288329,103.779633
+97,Agency for Integrated Care (5 Maxwell Road),1.278881,103.845721
+98,,,
+99,Pioneer Polyclinic,1.3385247,103.6990003
+100,,,
+101,Batam,,
+101,Asia Asset Recovery Pte Ltd (2019 Bukit Batok Industrial Park A),1.3426684,103.7517774
+101,Eye Clinic @ NTFGH,1.3344872,103.7428083
+102,Eye Clinic @ NTFGH,1.3344872,103.7428083
+103,Batam,,
+103,Asia Asset Recovery Pte Ltd (2019 Bukit Batok Industrial Park A),1.3426684,103.7517774
+104,Batam,,
+105,Toa Payoh Hub (490 Lor 6 Toa Payoh),1.3325736,103.8484186
+106,WinTech Nano-Technology Services Pte Ltd (10 Science Park Road),1.287754,103.779323
+107,Jakarta (Indonesia),,
+107,Tan Tock Seng Hospital,1.3213889,103.8458333
+108,,,
+109,Fish Market Sakuraya (154 West Coast Road),1.3036962,103.7655164
+110,Wizlearn Technologies Pte Ltd,1.288329,103.779633
+111,Malaysia,,
+111,Sengkang General Hospital,1.395493,103.893403
+112,Creative O Preschoolers' Bay (31 International Business Park),1.328688,103.7458207
+112,Bukit Batok Polyclinic,1.351972,103.7479241
+113,France,,
+113,Portugal,,
+113,UK,,
+113,Istanbul,,
+113,Gleneagles Hospital,1.3072973,103.8202408
+114,,,
+115,SAFRA Jurong,1.335065,103.7062804
+115,Pioneer Polyclinic,1.3385247,103.6990003
+116,SAFRA Jurong,1.335065,103.7062804
+117,SAFRA Jurong,1.335065,103.7062804
+117,Malaysia,,
+117,Shops at 131 Marsiling Rise,1.4384959,103.7782273
+117,Shops at 731 Yishun Street 72,1.42841,103.831038
+117,Petir Park (141 Petir Road),1.3759262,103.7681791
+117,Zhenghua Nature Park (466 Segar Road),1.3861277,103.7729044
+118,Pioneer Polyclinic,1.3385247,103.6990003
+119,,,
+120,SAFRA Jurong,1.335065,103.7062804
+120,Boon Lay Shopping Centre (221 Boon Lay Place),1.3463986,103.7125352
+121,SAFRA Jurong,1.335065,103.7062804
+122,Westgate (3 Gateway Drive),1.334533,103.742798
+122,Keat Hong Community Club (2 Choa Chu Kang Loop),1.3843015,103.7450121
+123,South Africa,,
+123,France,,
+124,Germany,,
+125,SAFRA Jurong,1.335065,103.7062804
+126,Singapore General Hospital,1.2804242,103.8348123
+127,,,
+128,SAFRA Jurong,1.335065,103.7062804
+129,Pioneer Polyclinic,1.3385247,103.6990003
+129,Shop at 966 Jurong West Street 91,1.342254,103.6915686
+129,Jurong Port Road Food Centre (29A Jurong Port Road),1.3151607,103.7197044
+130,Jurong Port Road Food Centre,1.3344444,103.7216667
+130,Bukit Batok Community Club (21 Bukit Batok Central),1.3503366,103.7475872
+131,Liang Guan Hak Kee (8 Pandan Crescent),1.311365,103.8636839
+131,Ayer Rajah Zone 3 Residents? Committee (32 Teban Gardens Road),1.3218358,103.7398904
+132,Camden Medical Centre (1 Orchard Boulevard),1.303247,103.8240906
+133,Pioneer Polyclinic,1.3385247,103.6990003
+134,Malaysia,,
+135,ST Electronics (100 Jurong East Street 21),1.3363185,103.7441549
+136,United States,,
+136,Italy,,
+136,Raffles Hospital,1.3011904,103.8572692
+137,SAFRA Jurong,1.335065,103.7062804
+138,SAFRA Punggol (9 Sentul Crescent),1.4101557,103.9059834
+139,,,
+140,Landom Distributions Pte Ltd (31 Jurong Port Road),1.313258,103.719863
+141,Nanyang Technological University (NTU) Innovation Centre (71 Nanyang Drive),1.3483782,103.681636
+142,First Page Digital Singapore (144 Robinson Road),1.278462,103.8481973
+142,The Aperia Mall (12 Kallang Avenue),1.3104579,103.8642941
+143,Thailand,,
+144,,,
+145,16 Teck Whye Lane,1.3787335,103.7551205
+146,,,
+147,Seletar Airport,1.4149194,103.8709224
+148,Indonesia,,
+148,Marina Bay Sands Casino (10 Bayfront Avenue),1.282302,103.8585308
+149,Tan Tock Seng Hospital,1.3213889,103.8458333
+149,Tong Whye Temple Senior Citizen Club (306 Jurong East Street 32).,1.3462458,103.7353001
+150,Nanyang Community Club,1.3424797,103.6924185
+151,Yishun Polyclinic,1.4303842,103.8390594
+151,Mei Hwan Drive,1.3538357,103.8604674
+152,Indonesia,,
+153,Indonesia,,
+153,Choa Chu Kang Polyclinic,1.38236,103.7508299
+154,Switzerland,,
+154,United Kingdom,,
+155,,,
+156,,,
+157,,,
+158,Farrer Park Hospital (1 Farrer Park),1.3130812,103.8542173
+159,Farrer Park Hospital (1 Farrer Park),1.3130812,103.8542173
+160,The Orange Tree Preschool @ Choa Chu Kang (10 Choa Chu Kang Road),1.3793677,103.7591311
+161,,,
+162,Indonesia,,
+162,Shop at 26 Jalan Membina,1.2829215,103.8254669
+163,Funan Mall (107 North Bridge Road),1.291321,103.8500832
+163,PUB Recreation Club (48 Woodleigh Park),1.3424601,103.8674047
+164,,,
+165,France,,
+166,Samwoh Corporate Pte Ltd (25E Sungei Kadut Street 1),1.410005,103.7499608
+167,Philippines,,
+167,NTFGH,1.3337448,103.7453915
+168,,,
+169,France,,
+169,Health Promotion Board,1.2797591,103.8383594
+170,Indonesia,,
+171,France,,
+171,Spain,,
+172,Philippines,,
+172,AXA Singapore (8 Shenton Way),1.2761294,103.8474403
+173,France,,
+174,,,
+175,France,,
+176,Japan,,
+176,United Kingdom,,
+176,Gleneagles Hospital,1.3072973,103.8202408
+177,United States,,
+177,United Kingdom,,
+177,France,,
+178,Philippines,,
+179,,,
+180,,,
+181,Indonesia,,
+182,Indonesia,,
+183,Malaysia,,
+183,Masjid Al-Muttaqin (5140 Ang Mo Kio Avenue 6),1.3703942,103.8459921
+183,Masjid Al-Iman (10 Bukit Panjang Ring Road),1.3781073,103.7727661
+183,Masjid Kassim (450 Changi Road),1.3187265,103.9123599
+183,Masjid Hajjah Fatimah (4001 Beach Road),1.3029248,103.8628587
+183,Pergas (448 Changi Road),1.318787,103.912166
+184,,,
+185,,,
+186,Samwoh Corporate Pte Ltd (25E Sungei Kadut Street 1),1.410005,103.7499608
+187,Malaysia,,
+187,Masjid Hajjah Rahimabi Kebun Limau (76 Kim Keat Road),1.3261111,103.8547222
+188,Northpoint City (930 Yishun Avenue 2),1.4279686,103.8364152
+188,743 Yishun Avenue 5,1.4299473,103.8336948
+189,Sumitomo Mitsui Banking Corporation (3 Temasek Ave),1.293309,103.860354
+190,,,
+191,,,
+192,,,
+193,Germany,,
+193,Czech Republic,,
+193,Austria,,
+193,Hungary,,
+194,Germany,,
+194,Czech Republic,,
+194,Austria,,
+194,Hungary,,
+195,United States,,
+195,Canada,,
+196,,,
+197,Malaysia,,
+198,,,
+199,Malaysia,,
+200,,,
+201,,,
+202,Malaysia,,
+202,Masjid Al-Mawaddah (151 Compassvale Bow),1.3835019,103.8903391
+202,Masjid Jamae (Chulia) (218 South Bridge Road),1.2832261,103.8454284
+202,Masjid Al-Istiqamah (2 Serangoon North Avenue 2),1.3692056,103.8755059
+203,Indonesia,,
+204,,,
+205,Philippines,,
+205,DNATA Cargo (45 Airport Cargo Road),1.372639,103.996401
+206,United States,,
+207,United Kingdom,,
+208,Singapore General Hospital,1.2804242,103.8348123
+209,United States,,
+209,Singapore General Hospital,1.2804242,103.8348123
+210,Germany,,
+210,Switzerland,,
+211,,,
+212,Mount Elizabeth Hospital,1.3055915,103.8354837
+213,Indonesia,,
+214,Youth Go! (403 Fajar Road),1.3811432,103.768485
+214,Project 180 @ Simei (145 Simei Street 2),1.344913,103.955534
+214,Singapore University of Social Sciences (463 Clementi Road),1.329081,103.7761967
+215,Thailand,,
+215,Cash Box (1 Jurong West Central 2),1.3397963,103.7068121
+216,Germany,,
+216,Czech Republic,,
+216,SAP Asia (30 Pasir Panjang Road),1.2748869,103.7977485
+217,,,
+218,,,
+219,Sengkang Fire Station,1.3801811,103.8954345
+219,Meiben Mold Manufacture Pte Ltd (26 Ang Mo Kio Industrial Park 2),1.376282,103.866983
+219,Furama Riverfront (405 Havelock Road),1.28774,103.8359909
+220,France,,
+221,MY World Preschool Ltd (52 Lengkok Bahru),1.2885141,103.8134199
+221,Training Masters Workforce Institute (10 Arumugan Road),1.3254536,103.8911025
+221,OUE Downtown Gallery (6A Shenton Way),1.2777613,103.8489083
+222,France,,
+222,Spain,,
+222,Philippines,,
+222,Airbus Singapore Pte Ltd (12 Seletar Aerospace Link),1.4051274,103.8579145
+223,United States,,
+223,Australia,,
+224,Malaysia,,
+225,Indonesia,,
+225,Mount Elizabeth Hospital,1.3055915,103.8354837
+226,The Netherlands,,
+226,Gleneagles Hospital,1.3072973,103.8202408
+227,France,,
+228,Bedok Polyclinic,1.3269794,103.9318285
+229,Spain,,
+230,Eastern Europe,,
+231,United States,,
+232,United States,,
+233,UK,,
+233,Parkway East Hospital,1.3150433,103.9089093
+234,Bukit Merah Polyclinic,1.2837189,103.8171087
+235,SGH Staff Clinic,1.281055,103.836365
+236,,,
+237,,,
+238,Raffles Hospital,1.3011904,103.8572692
+239,France,,
+240,Spain,,
+241,France,,
+242,Malaysia,,
+243,Germany,,
+243,Italy,,
+243,Switzerland,,
+243,River Valley Road,1.2955326,103.8378235
+244,River Valley Road,1.2955326,103.8378235
+245,Marina One West Tower (9 Straits View),1.2770998,103.8523757
+246,Japan,,
+246,Singtel Comcentre (31 Exeter Road),1.2992505,103.838464
+247,UK,,
+247,France,,
+248,Malaysia,,
+249,USA,,
+250,UK,,
+250,Austria,,
+251,,,
+252,Malaysia,,
+253,Spain,,
+254,France,,
+255,Norway,,
+255,Denmark,,
+255,Sweden,,
+256,,,
+257,UK,,
+258,Europe,,
+259,Philippines,,
+260,,,
+261,USA,,
+261,France,,
+262,UK,,
+263,Spain,,
+263,Portugal,,
+264,Indonesia,,
+265,UK,,
+266,Spain,,
+266,Portugal,,

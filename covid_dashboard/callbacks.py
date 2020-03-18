@@ -10,6 +10,9 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 from datetime import datetime, date, time, timedelta
+import urllib
+from urllib.parse import quote, urlparse, parse_qsl, urlencode
+from random import random
 import io
 import flask
 import json
@@ -24,15 +27,9 @@ ctx = dash.callback_context
 
 # Read CSV
 df = pd.read_csv('sg_covid_cases.csv')
-residence_latitudes = df['residence_latitude'].dropna().tolist()
-residence_longitudes = df['residence_longitude'].dropna().tolist()
-
-# Hover text
-df['hover_text'] = 'Case ' + df['case_num'].astype(str) + '<br /> ' + df['date_confirmed'] + '<br /> ' + df['residence']
 
 # Change is_imported to Origin
 df['origin'] = df['is_imported'].apply(lambda x: 'Imported' if x is True else 'Local')
-
 # Check the number of days between today and first day
 df['date_confirmed_dt'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
 
@@ -43,63 +40,14 @@ n_days = (max_date - min_date).days + 1
 centroid_latitude = 1.360085
 centroid_longitude = 103.818654
 
+# Read places visited CSV
+places_df = pd.read_csv('sg_covid_places_visited.csv')
 
-
-### Test Callback which prints the dataframe to console at any one time
-@app.callback(
-    Output('filler', 'children'),
-    [Input('print_df_button', 'n_clicks')],
-)
-def print_df(n_clicks):
-    
-    print(df)
-    return None
-
-### Test Callback which prints the dataframe to console at any one time
-@app.callback(
-    Output('filler2', 'children'),
-    [Input('print_database_subset_button', 'n_clicks')],
-    [State('database_subset', 'data')],
-)
-def print_database_subset(n_clicks, database_subset):
-    
-    database_subset = json_to_df(database_subset)
-    print(database_subset)
-    return None
-
-
-### CALLBACK : Sets the display of the date slider
-@app.callback(
-    Output('date_slider_display', 'children'),
-    [Input('date_slider', 'value')]
-)
-def set_date_slider_display_text(date_slider_value):
-
-    # Convert slider value to date
-    return datetime.strftime((max_date - timedelta(days = (n_days - date_slider_value))), '%Y-%m-%d')
-
-### CALLBACK : Sets the displays of the age range slider
-@app.callback(
-    Output('age_range_slider_display', 'children'),
-    [Input('age_range_slider', 'value')]
-)
-def set_age_range_slider_display_text(age_range_slider_value):
-
-    return 'Age Range: {} to {} Years'.format(age_range_slider_value[0], age_range_slider_value[1])
-
-### CALLBACK : Selects all nationalities if the checkbox is checked
-@app.callback(
-    Output('nationality_dropdown', 'value'),
-    [Input('select_all_nationality_checklist', 'value')]
-)
-def set_all_nationality_dropdown(checkbox_value):
-    print(checkbox_value)
-    if checkbox_value == ['All']:
-        return [{'label': e, 'value': e} for e in df['nationality'].unique()]
-
-    else:
-        return []
-
+#Add random jitter 
+df['residence_latitude'] = df['residence_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+df['residence_longitude'] = df['residence_longitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+places_df['place_latitude'] = places_df['place_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+places_df['place_longitude'] = places_df['place_longitude'].apply(lambda x: x + (random() - 0.5) / 1000)
 
 ### CALLBACK 1: Filters the original database to form database_subset
 @app.callback(
@@ -114,7 +62,6 @@ def filter_database(date_slider_display, age_range_slider_value,
     gender_checklist_value, origin_checklist_value, nationality_dropdown_value):
 
     selected_nationalities = [e['value'] for e in nationality_dropdown_value]
-
     end_date = datetime.strptime(date_slider_display, '%Y-%m-%d')
     # Filter by date - starting point is original DF
     df_subset = df.loc[df['date_confirmed_dt'] <= end_date]
@@ -145,21 +92,43 @@ def update_datatable(df_subset):
     return datatable_data
 
 
-### CALLBACK 3: Draws the map
+### CALLBACK 3: Draws the map - THIS IS WHERE PLACES_DF IS MERGED
 @app.callback(
     Output('map', 'figure'),
-    [Input('database_subset', 'data')])
-def draw_map_scatterplot(df_subset):
+    [Input('database_subset', 'data'),
+    Input('places_radio_button', 'value')])
+def draw_map_scatterplot(df_subset, places_radio_button_value):
 
     df_subset = json_to_df(df_subset)
 
+    # Hover text
+    
+
+    # Display places visited
+    if places_radio_button_value == 'Places Visited':
+        df_subset = df_subset.merge(places_df, how = 'left', on = 'case_num')
+
+        lat = df_subset['place_latitude']
+        lon = df_subset['place_longitude']
+
+        df_subset['hover_text'] = 'Case ' + df_subset['case_num'].astype(str) + \
+        '<br /> ' + df_subset['date_confirmed'] + '<br /> ' + df_subset['places_visited_list']
+
+    elif places_radio_button_value == 'Residence':
+
+        lat = df_subset['residence_latitude']
+        lon = df_subset['residence_longitude']
+
+        df_subset['hover_text'] = 'Case ' + df_subset['case_num'].astype(str) + \
+        '<br /> ' + df_subset['date_confirmed'] + '<br /> ' + df_subset['residence']
+
     data = [go.Scattermapbox(
-            lat = df_subset['residence_latitude'], 
-            lon = df_subset['residence_longitude'], 
+            lat = lat, 
+            lon = lon, 
             marker = {'color': df_subset['days_before_now'],
                     'colorscale': 'Reds',
-                    'size': 8,
-                    'opacity': 0.75},
+                    'size': 15,
+                    'opacity': 0.5},
             mode='markers', 
             text = df_subset['hover_text'], 
             hoverinfo='text', 
@@ -168,16 +137,16 @@ def draw_map_scatterplot(df_subset):
     return {"data": data,
             "layout": go.Layout(
                 height = 800,
-                width = 1200,
-
+                width = 1800,
+                margin={'l': 50, 'r': 50, 't': 0, 'b': 0},
                 hovermode='closest', 
                 showlegend=False, 
                 mapbox={
                     'accesstoken': mapbox_access_token, 
                     'bearing': 0, 
                     'center': {'lat': centroid_latitude, 'lon': centroid_longitude}, 
-                    'pitch': 0, 'zoom': 10,
-                    #"style": 'mapbox://styles/mapbox/streets-v11'
+                    'pitch': 0, 'zoom': 11,
+                    'style': 'mapbox://styles/mapbox/outdoors-v11'
                     }
                 )
             }
@@ -225,3 +194,95 @@ def play_pause_animation(play_pause_button, is_disabled):
 def change_animation_speed(slider_value):
     interval = (12.5 - 2 * slider_value) * 100
     return interval
+
+
+
+### CALLBACK : Sets the display of the date slider
+@app.callback(
+    Output('date_slider_display', 'children'),
+    [Input('date_slider', 'value')]
+)
+def set_date_slider_display_text(date_slider_value):
+
+    # Convert slider value to date
+    return datetime.strftime((max_date - timedelta(days = (n_days - date_slider_value))), '%Y-%m-%d')
+
+### CALLBACK : Sets the displays of the age range slider
+@app.callback(
+    Output('age_range_slider_display', 'children'),
+    [Input('age_range_slider', 'value')]
+)
+def set_age_range_slider_display_text(age_range_slider_value):
+
+    return 'Age Range: {} to {} Years'.format(age_range_slider_value[0], age_range_slider_value[1])
+
+### CALLBACK : Selects all nationalities if the checkbox is checked
+@app.callback(
+    Output('nationality_dropdown', 'value'),
+    [Input('select_all_nationality_checklist', 'value')]
+)
+def set_all_nationality_dropdown(checkbox_value):
+    print(checkbox_value)
+    if checkbox_value == ['All']:
+        return [{'label': e, 'value': e} for e in df['nationality'].unique()]
+
+    else:
+        return []
+
+
+#CALLBACK : Updates the download link when df-store is updated to allow user to download data as CSV
+@app.callback(
+    Output("download-link", "href"),
+    [Input('database_subset', 'data')])
+
+def update_download_link(database_subset):
+    df = json_to_df(database_subset)
+
+    df = df.rename(columns = {'case_num': 'No.', 'age': 'Age', 'gender': 'Gender', 'hospital': 'Hospital', 
+                'date_confirmed': 'Date Confirmed', 'nationality': 'Nationality', 'origin': 'Origin',
+                'residence': 'Residence', 'places_visited': 'Places Visited'})
+
+    df = df.loc[: , ['No.', 'Age', 'Gender', 'Hospital', 'Date Confirmed', 'Nationality', 'Origin',
+                'Residence', 'Places Visited']]
+
+    csv_string = df.to_csv(index=False, encoding='utf-8')
+    csv_string = "data:text/csv;charset=utf-8," + urllib.parse.quote(csv_string)
+
+    return csv_string
+
+# CALLBACK : Makes the nationality dropdown disappear if the select_all_nationality_checklist is checked
+@app.callback(
+    Output('nationality_dropdown', 'style'),
+    [Input('select_all_nationality_checklist', 'value')]
+)
+def change_nationality_dropdown_visibility(checkbox_value):
+
+    print(checkbox_value)
+    if checkbox_value == ['All']:
+        return {'display': 'none'}
+    else:
+        return {'display': 'inline-block', 'width': '100%'}
+
+
+
+# ### Test Callback which prints the dataframe to console at any one time
+# @app.callback(
+#     Output('filler', 'children'),
+#     [Input('print_df_button', 'n_clicks')],
+# )
+# def print_df(n_clicks):
+    
+#     print(df)
+#     return None
+
+# ### Test Callback which prints the dataframe to console at any one time
+# @app.callback(
+#     Output('filler2', 'children'),
+#     [Input('print_database_subset_button', 'n_clicks')],
+#     [State('database_subset', 'data')],
+# )
+# def print_database_subset(n_clicks, database_subset):
+    
+#     database_subset = json_to_df(database_subset)
+#     print(database_subset)
+#     return None

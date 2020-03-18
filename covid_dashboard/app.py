@@ -6,7 +6,7 @@ import dash_bootstrap_components as dbc
 
 server = Flask('project')
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes.SANDSTONE]
+external_stylesheets = [dbc.themes.LITERA]
 app = Dash(__name__, server = server, external_stylesheets=external_stylesheets)
 
 from covid_dashboard.layout import layout
