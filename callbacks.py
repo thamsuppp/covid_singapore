@@ -18,9 +18,11 @@ import flask
 import json
 from sqlalchemy import create_engine
 
+from layout import connection
+
 # Connect to database
-engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
-connection = engine.connect()
+#engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+#connection = engine.connect()
 
 # Importing functions from other files
 from utilities import json_to_df
@@ -105,8 +107,6 @@ def draw_map_scatterplot(df_subset, places_radio_button_value):
 
     df_subset = json_to_df(df_subset)
 
-    # Hover text
-    
 
     # Display places visited
     if places_radio_button_value == 'Places Visited':
@@ -143,7 +143,7 @@ def draw_map_scatterplot(df_subset, places_radio_button_value):
     return {"data": data,
             "layout": go.Layout(
                 height = 800,
-                width = 1800,
+                width = 1450,
                 margin={'l': 50, 'r': 50, 't': 0, 'b': 0},
                 hovermode='closest', 
                 showlegend=False, 
@@ -198,7 +198,7 @@ def play_pause_animation(play_pause_button, is_disabled):
     [Input('animation_speed_slider', 'value')]
 )
 def change_animation_speed(slider_value):
-    interval = (12.5 - 2 * slider_value) * 100
+    interval = (15 - 2 * slider_value) * 100
     return interval
 
 
@@ -271,24 +271,25 @@ def change_nationality_dropdown_visibility(checkbox_value):
 
 
 
-# ### Test Callback which prints the dataframe to console at any one time
-# @app.callback(
-#     Output('filler', 'children'),
-#     [Input('print_df_button', 'n_clicks')],
-# )
-# def print_df(n_clicks):
-    
-#     print(df)
-#     return None
+@app.callback(
+    Output("info_modal", "is_open"),
+    [Input("info_button", "n_clicks"), 
+    Input("close_info_button", "n_clicks")],
+    [State("info_modal", "is_open")],
+)
+def toggle_info_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
 
-# ### Test Callback which prints the dataframe to console at any one time
-# @app.callback(
-#     Output('filler2', 'children'),
-#     [Input('print_database_subset_button', 'n_clicks')],
-#     [State('database_subset', 'data')],
-# )
-# def print_database_subset(n_clicks, database_subset):
-    
-#     database_subset = json_to_df(database_subset)
-#     print(database_subset)
-#     return None
+
+@app.callback(
+    Output("about_modal", "is_open"),
+    [Input("about_button", "n_clicks"), 
+    Input("close_about_button", "n_clicks")],
+    [State("about_modal", "is_open")],
+)
+def toggle_about_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open

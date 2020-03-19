@@ -1,15 +1,32 @@
 
 import dash_html_components as html
 import dash_core_components as dcc
+import dash_bootstrap_components as dbc
 import dash_table
 from datetime import datetime, date, time, timedelta
 import pandas as pd
-from sqlalchemy import create_engine
+import sqlalchemy
 
 # Connect to database
-engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
-connection = engine.connect()
 
+# # Using App Engine
+# engine = sqlalchemy.create_engine(
+#     # Equivalent URL:
+#     # mysql+pymysql://<db_user>:<db_pass>@/<db_name>?unix_socket=/cloudsql/<cloud_sql_instance_name>
+#     sqlalchemy.engine.url.URL(
+#         drivername="mysql+pymysql",
+#         username='root',
+#         password='isaactham',
+#         database='covid_sg_data',
+#         query={"unix_socket": "/cloudsql/{}".format('covidsg:us-east1:covidsgdatabase')},
+#     ),
+#     # ... Specify additional properties here.
+#     # ...
+# )
+
+# Locally
+engine = sqlalchemy.create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+connection = engine.connect()
 
 # Read Cases
 df = pd.read_sql_query('SELECT * FROM cases', connection)
@@ -31,7 +48,7 @@ layout = html.Div([
     html.Div([html.H1("Singapore COVID-19 Cases")],
              style={'textAlign': "center", "padding-bottom": "10", "padding-top": "10"}),
 
-    html.H3('As of {} there are {} confirmed cases in Singapore, of which {} are new cases.'.format(
+    html.H3('As of {} there are {} confirmed cases in Singapore.'.format(
         datetime.strftime(df['date_confirmed_dt'].max(), '%d %b'),len(df), sum(df['date_confirmed_dt'] == df['date_confirmed_dt'].max()))),
     
     dcc.Store(id = 'database'),
@@ -68,7 +85,7 @@ layout = html.Div([
                         {'label': 'Female', 'value': 'F'}],
             value = ['M', 'F'])
             ], style = dict(
-            width = '15%',
+            width = '10%',
             verticalAlign = 'middle',
             display = 'table-cell'
         )),
@@ -80,7 +97,7 @@ layout = html.Div([
                         {'label': 'Local', 'value': 'Local'}],
             value = ['Imported', 'Local'])
             ], style = dict(
-            width = '15%',
+            width = '10%',
             verticalAlign = 'middle',
             display = 'table-cell'
             )),
@@ -91,7 +108,7 @@ layout = html.Div([
             options =[{'label': 'All Nationalities', 'value': 'All'}],
             value = ['All'])
             ], style = dict(
-            width = '15%',
+            width = '8%',
             verticalAlign = 'middle',
             display = 'table-cell'
             )),
@@ -111,10 +128,92 @@ layout = html.Div([
         ],
         style=dict(
             height='2px',
-            width='15%',
+            width='8%',
             display='table-cell',
             verticalAlign="middle",
-        ))
+        )),
+
+        html.Div(
+        [
+            html.Button(
+                "Info",
+                id="info_button",
+                className="btn btn-primary",
+                style=dict(height='30px', width = '80px', verticalAlign = 'middle')
+            ),
+
+            dbc.Modal(
+            [
+                dbc.ModalHeader("Info"),
+                dbc.ModalBody('''The data on Singapore COVID-19 cases has been obtained from the Ministry of Health's website. The data is updated daily when MOH releases new case data.
+ 
+                The patients can be filtered according to age, gender, imported/local and nationality with the filters above. Changing a filter will change the table as well as the points displayed on the map.
+                 
+                The points on the map represent COVID-19 patients' residences, or the places they have visited - depending on which option is selected. The color of the points represents how recent the cases are - redder points are more recent cases. 
+                
+                The data can be downloaded in CSV format by clicking the Download button.''',
+                style = {'white-space': 'pre-line', 'text-align': 'justify'}),
+                dbc.ModalFooter(
+                    dbc.Button("Close", id="close_info_button", className="ml-auto")
+                ),
+            ],
+            id="info_modal",
+        ),
+        ],
+        style=dict(
+            height='2px',
+            width='6%',
+            display='table-cell',
+            verticalAlign="middle",
+        )),
+
+        html.Div(
+        [
+            html.Button(
+                "About",
+                id="about_button",
+                className="btn btn-primary",
+                style=dict(height='30px', width = '80px', verticalAlign = 'middle')
+            ),
+
+            dbc.Modal(
+            [
+                dbc.ModalHeader("About"),
+                dbc.ModalBody('''This app has been created by Isaac Tham, a Singaporean second-year undergraduate at the University of Pennsylvania. 
+                
+                Isaac is excited to hear from you and collaborate with like-minded data enthusiasts the benefit of our society. Contact Isaac on email at isaactham2@hotmail.com or though Facebook.''',
+                style = {'white-space': 'pre-line', 'text-align': 'justify'}),
+                dbc.ModalFooter(
+                    dbc.Button("Close", id="close_about_button", className="ml-auto")
+                ),
+            ],
+            id="about_modal",
+        ),
+        ],
+        style=dict(
+            height='2px',
+            width='6%',
+            display='table-cell',
+            verticalAlign="middle",
+        )),
+
+        html.Div(
+        [
+            html.A(
+                "Share on FB",
+                href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcovidsg.appspot.com%2F",
+                className="btn btn-primary",
+                target="_blank",
+                style=dict(height='30px', width = '100px', verticalAlign = 'middle')
+            )
+        ],
+        style=dict(
+            height='2px',
+            width='8%',
+            display='table-cell',
+            verticalAlign="middle",
+        )),
+
 
         ], style = dict(
             width = '100%',
@@ -165,15 +264,15 @@ layout = html.Div([
             {'if': {'column_id': 'case_num'},
             'width': '50px'},
             {'if': {'column_id': 'age'},
-            'width': '100px'},
+            'width': '60px'},
             {'if': {'column_id': 'gender'},
-            'width': '100px'},
+            'width': '80px'},
             {'if': {'column_id': 'hospital'},
-            'width': '150px'},
+            'width': '100px'},
             {'if': {'column_id': 'date_confirmed'},
             'width': '150px'},
             {'if': {'column_id': 'origin'},
-            'width': '100px'},
+            'width': '80px'},
             {'if': {'column_id': 'nationality'},
             'width': '150px'},
             {'if': {'column_id': 'residence'},
