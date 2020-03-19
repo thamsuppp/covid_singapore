@@ -4,9 +4,16 @@ import dash_core_components as dcc
 import dash_table
 from datetime import datetime, date, time, timedelta
 import pandas as pd
+from sqlalchemy import create_engine
+
+# Connect to database
+engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+connection = engine.connect()
+
 
 # Read Cases
-df = pd.read_csv('sg_covid_cases.csv')
+df = pd.read_sql_query('SELECT * FROM cases', connection)
+df['is_imported'] = df['is_imported'].apply(lambda x: True if x == '1' else False)
 
 # Check the number of days between today and first day
 df['date_confirmed_dt'] = df['date_confirmed'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))

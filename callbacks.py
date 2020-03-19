@@ -16,7 +16,11 @@ from random import random
 import io
 import flask
 import json
+from sqlalchemy import create_engine
 
+# Connect to database
+engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+connection = engine.connect()
 
 # Importing functions from other files
 from utilities import json_to_df
@@ -25,8 +29,9 @@ mapbox_access_token = "pk.eyJ1IjoidGhhbXN1cHBwIiwiYSI6ImNrN3Z4eTk2cTA3M2czbG5udD
 
 ctx = dash.callback_context
 
-# Read CSV
-df = pd.read_csv('sg_covid_cases.csv')
+# Read Cases
+df = pd.read_sql_query('SELECT * FROM cases', connection)
+df['is_imported'] = df['is_imported'].apply(lambda x: True if x == '1' else False)
 
 # Change is_imported to Origin
 df['origin'] = df['is_imported'].apply(lambda x: 'Imported' if x is True else 'Local')
