@@ -14,5 +14,8 @@ app.layout = layout
 
 from callbacks import *
 
+server = app.server
+
+
 if __name__ == '__main__':
-    app.server.run(host = '127.0.0.1', port = 8050, debug = False)
+    app.run_server(debug = True)
