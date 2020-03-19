@@ -44,7 +44,7 @@ centroid_latitude = 1.360085
 centroid_longitude = 103.818654
 
 # Read places visited CSV
-places_df = pd.read_csv('sg_covid_places_visited.csv')
+places_df = pd.read_sql_query('select * from places', connection)
 
 #Add random jitter 
 df['residence_latitude'] = df['residence_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
