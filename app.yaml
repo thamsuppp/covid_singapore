@@ -6,4 +6,4 @@ runtime_config:
   python_version: 3
 
 beta_settings:
-  cloud_sql_instances: <INSTANCE_CONNECTION_NAME>
+  cloud_sql_instances: covidsg:us-east1:covidsgdatabase
