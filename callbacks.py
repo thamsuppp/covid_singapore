@@ -1,5 +1,5 @@
 
-from .app import app
+from main import app
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
@@ -19,7 +19,7 @@ import json
 
 
 # Importing functions from other files
-from .utilities import json_to_df
+from utilities import json_to_df
 
 mapbox_access_token = "pk.eyJ1IjoidGhhbXN1cHBwIiwiYSI6ImNrN3Z4eTk2cTA3M2czbG5udDBtM29ubGIifQ.3UvulsJUb0FSLnAOkJiRiA"
 
