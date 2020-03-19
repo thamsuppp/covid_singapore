@@ -9,23 +9,23 @@ import sqlalchemy
 
 # Connect to database
 
-# Using App Engine
-engine = sqlalchemy.create_engine(
-    # Equivalent URL:
-    # mysql+pymysql://<db_user>:<db_pass>@/<db_name>?unix_socket=/cloudsql/<cloud_sql_instance_name>
-    sqlalchemy.engine.url.URL(
-        drivername="mysql+pymysql",
-        username='root',
-        password='isaactham',
-        database='covid_sg_data',
-        query={"unix_socket": "/cloudsql/{}".format('covidsg:us-east1:covidsgdatabase')},
-    ),
-    # ... Specify additional properties here.
-    # ...
-)
+#Using App Engine
+# engine = sqlalchemy.create_engine(
+#     # Equivalent URL:
+#     # mysql+pymysql://<db_user>:<db_pass>@/<db_name>?unix_socket=/cloudsql/<cloud_sql_instance_name>
+#     sqlalchemy.engine.url.URL(
+#         drivername="mysql+pymysql",
+#         username='root',
+#         password='isaactham',
+#         database='covid_sg_data',
+#         query={"unix_socket": "/cloudsql/{}".format('covidsg:us-east1:covidsgdatabase')},
+#     ),
+#     # ... Specify additional properties here.
+#     # ...
+# )
 
 # Locally
-#engine = sqlalchemy.create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+engine = sqlalchemy.create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
 connection = engine.connect()
 
 # Read Cases
@@ -181,7 +181,7 @@ layout = html.Div([
                 dbc.ModalHeader("About"),
                 dbc.ModalBody('''This app has been created by Isaac Tham, a Singaporean second-year undergraduate at the University of Pennsylvania. 
                 
-                Isaac is excited to hear from you and collaborate with like-minded data enthusiasts the benefit of our society. Contact Isaac on email at isaactham2@hotmail.com or though Facebook.''',
+                Isaac is excited to hear from you and collaborate with like-minded data enthusiasts for the benefit of our society. Contact Isaac on email at isaactham2@hotmail.com or though Facebook.''',
                 style = {'white-space': 'pre-line', 'text-align': 'justify'}),
                 dbc.ModalFooter(
                     dbc.Button("Close", id="close_about_button", className="ml-auto")

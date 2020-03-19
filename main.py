@@ -10,7 +10,7 @@ external_stylesheets = [dbc.themes.LUMEN]
 
 meta_tags = [
     {'property': 'og:image',
-    'content': 'static/covid_app_cover_image.png'}
+    'content': 'https://www.todayonline.com/sites/default/files/styles/new_app_article_detail/public/19356685_0.PNG?itok=yph1Myl7'}
 ]
 
 

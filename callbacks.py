@@ -47,10 +47,10 @@ centroid_longitude = 103.818654
 places_df = pd.read_sql_query('select * from places', connection)
 
 #Add random jitter 
-df['residence_latitude'] = df['residence_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
-df['residence_longitude'] = df['residence_longitude'].apply(lambda x: x + (random() - 0.5) / 1000)
-places_df['place_latitude'] = places_df['place_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
-places_df['place_longitude'] = places_df['place_longitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+#df['residence_latitude'] = df['residence_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+#df['residence_longitude'] = df['residence_longitude'].apply(lambda x: x + (random() - 0.5) / 1000)
+places_df['place_latitude'] = places_df['place_latitude'].apply(lambda x: x + (random() - 0.5) / 10000)
+places_df['place_longitude'] = places_df['place_longitude'].apply(lambda x: x + (random() - 0.5) / 10000)
 
 ### CALLBACK 1: Filters the original database to form database_subset
 @app.callback(
@@ -194,7 +194,7 @@ def play_pause_animation(play_pause_button, is_disabled):
     [Input('animation_speed_slider', 'value')]
 )
 def change_animation_speed(slider_value):
-    interval = (15 - 2 * slider_value) * 100
+    interval = (15 - 1.5 * slider_value) * 100
     return interval
 
 
