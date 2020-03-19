@@ -20,10 +20,6 @@ from sqlalchemy import create_engine
 
 from layout import connection
 
-# Connect to database
-#engine = create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
-#connection = engine.connect()
-
 # Importing functions from other files
 from utilities import json_to_df
 
