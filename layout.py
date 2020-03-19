@@ -10,22 +10,22 @@ import sqlalchemy
 # Connect to database
 
 #Using App Engine
-# engine = sqlalchemy.create_engine(
-#     # Equivalent URL:
-#     # mysql+pymysql://<db_user>:<db_pass>@/<db_name>?unix_socket=/cloudsql/<cloud_sql_instance_name>
-#     sqlalchemy.engine.url.URL(
-#         drivername="mysql+pymysql",
-#         username='root',
-#         password='isaactham',
-#         database='covid_sg_data',
-#         query={"unix_socket": "/cloudsql/{}".format('covidsg:us-east1:covidsgdatabase')},
-#     ),
-#     # ... Specify additional properties here.
-#     # ...
-# )
+engine = sqlalchemy.create_engine(
+    # Equivalent URL:
+    # mysql+pymysql://<db_user>:<db_pass>@/<db_name>?unix_socket=/cloudsql/<cloud_sql_instance_name>
+    sqlalchemy.engine.url.URL(
+        drivername="mysql+pymysql",
+        username='root',
+        password='isaactham',
+        database='covid_sg_data',
+        query={"unix_socket": "/cloudsql/{}".format('covidsg:us-east1:covidsgdatabase')},
+    ),
+    # ... Specify additional properties here.
+    # ...
+)
 
 # Locally
-engine = sqlalchemy.create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
+#engine = sqlalchemy.create_engine('mysql+pymysql://root:isaactham@127.0.0.1/covid_sg_data')
 connection = engine.connect()
 
 # Read Cases
