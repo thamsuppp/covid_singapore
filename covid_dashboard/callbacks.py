@@ -60,8 +60,7 @@ places_df['place_longitude'] = places_df['place_longitude'].apply(lambda x: x + 
 )
 def filter_database(date_slider_display, age_range_slider_value,
     gender_checklist_value, origin_checklist_value, nationality_dropdown_value):
-
-    selected_nationalities = [e['value'] for e in nationality_dropdown_value]
+    selected_nationalities = [e for e in nationality_dropdown_value]
     end_date = datetime.strptime(date_slider_display, '%Y-%m-%d')
     # Filter by date - starting point is original DF
     df_subset = df.loc[df['date_confirmed_dt'] <= end_date]
@@ -126,9 +125,11 @@ def draw_map_scatterplot(df_subset, places_radio_button_value):
             lat = lat, 
             lon = lon, 
             marker = {'color': df_subset['days_before_now'],
-                    'colorscale': 'Reds',
-                    'size': 15,
-                    'opacity': 0.5},
+                    'colorscale': 'reds',
+                    'cmin': -n_days - 5,
+                    'cmax': n_days / 3,
+                    'size': 12,
+                    'opacity': 1},
             mode='markers', 
             text = df_subset['hover_text'], 
             hoverinfo='text', 
@@ -224,7 +225,7 @@ def set_age_range_slider_display_text(age_range_slider_value):
 def set_all_nationality_dropdown(checkbox_value):
     print(checkbox_value)
     if checkbox_value == ['All']:
-        return [{'label': e, 'value': e} for e in df['nationality'].unique()]
+        return [e for e in df['nationality'].unique()]
 
     else:
         return []

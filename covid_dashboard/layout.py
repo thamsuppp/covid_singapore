@@ -97,9 +97,9 @@ layout = html.Div([
                 id="download-link",
                 download="data.csv",
                 href="#",
-                className="btn btn-primary btn-block",
+                className="btn btn-primary",
                 target="_blank",
-                style=dict(height='40px', width = '120px', verticalAlign = 'middle')
+                style=dict(height='30px', width = '100px', verticalAlign = 'middle')
             )
         ],
         style=dict(
@@ -180,7 +180,7 @@ layout = html.Div([
         sort_action = 'native',
         #hidden_columns = ['residence_latitude', 'residence_longitude', 'date_confirmed_dt']
     )
-    ]),
+    ], style = {'padding': '10px'}),
 
     html.Div([
 
@@ -193,7 +193,9 @@ layout = html.Div([
             style=dict(width='60%', display='table-cell', verticalAlign="middle")),
 
         html.Div([
-            html.Button('Play', id = 'animation_play_pause_button'),
+            html.Button('Play', id = 'animation_play_pause_button',
+                className="btn btn-primary",
+                style=dict(height='30px', width = '60px', verticalAlign = 'middle')),
             dcc.Interval(id='date_slider_interval', interval = 1 * 1000, disabled=True),
             html.Div(id='date_slider_value_store', style={'display': 'none'})
         ], style = dict(width = '5%', verticalAlign = 'middle', display = 'table-cell')),
