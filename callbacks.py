@@ -18,7 +18,7 @@ import flask
 import json
 from sqlalchemy import create_engine
 
-from layout import connection
+#from layout import connection
 
 # Importing functions from other files
 from utilities import json_to_df
@@ -28,7 +28,9 @@ mapbox_access_token = "pk.eyJ1IjoidGhhbXN1cHBwIiwiYSI6ImNrN3Z4eTk2cTA3M2czbG5udD
 ctx = dash.callback_context
 
 # Read Cases
-df = pd.read_sql_query('SELECT * FROM cases', connection)
+#df = pd.read_sql_query('SELECT * FROM cases', connection)
+df = pd.read_csv('sg_covid_cases.csv')
+
 df['is_imported'] = df['is_imported'].apply(lambda x: True if x == 1 else False)
 
 # Change is_imported to Origin
@@ -44,7 +46,8 @@ centroid_latitude = 1.360085
 centroid_longitude = 103.818654
 
 # Read places visited CSV
-places_df = pd.read_sql_query('select * from places', connection)
+#places_df = pd.read_sql_query('select * from places', connection)
+places_df = pd.read_csv('sg_covid_places_visited.csv')
 
 #Add random jitter 
 #df['residence_latitude'] = df['residence_latitude'].apply(lambda x: x + (random() - 0.5) / 1000)
