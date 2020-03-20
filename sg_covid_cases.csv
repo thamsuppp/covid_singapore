@@ -1,0 +1,346 @@
+case_num,age,gender,hospital,date_confirmed,is_imported,nationality,residence,places_visited,residence_address,residence_latitude,residence_longitude
+1,66,M,SGH,2020-01-23,True,Chinese,Shangri-La Rasa Sentosa Resort & Spa,,"101 Siloso Rd, Singapore 098970",1.2577323,103.8097962
+2,53,F,NCID,2020-01-24,True,Chinese,"J8 hotel, 8 Townshend Road","Raffles Hospital, Tan Tock Seng Emergency Department, Orchard Road, Marina Bay Sands, Gardens by the Bay","8 Townshend Rd, #01-01, Singapore 207606",1.3076071,103.8584645
+3,37,M,SGH,2020-01-24,True,Chinese,,,,,
+4,36,M,SKH,2020-01-25,True,Chinese,Village Hotel Sentosa,"USS, Vivocity","10 Artillery Ave, #02-01 Palawan Ridge, Sentosa Island, Singapore 099951",1.2523958,103.8201982
+5,56,F,NCID,2020-01-27,True,Chinese,Ceylon Road,Tan Tock Seng Hospital,"Ceylon Rd, Singapore",1.308566,103.9006498
+6,56,M,CGH,2020-01-27,True,Chinese,Pasir Ris Grove, ,"Pasir Ris Grove, Singapore",1.371058,103.9452663
+7,35,M,NCID,2020-01-27,True,Chinese,Marina Bay Sands (10 Bayfront Avenue),Raffles Hospital,"10 Bayfront Ave, Sands Expo & Convention Centre, Singapore 018956",1.2822964,103.8585477
+8,56,F,NCID,2020-01-28,True,Chinese,Lorong Lew Lian,"Tan Tock Seng Hospital,The Life Church and Missions Singapore (146B Paya Lebar Road)","Lor Lew Lian, Singapore",1.3503431,103.8773085
+9,56,M,NCID,2020-01-29,True,Chinese,Lorong Lew Lian,"Tan Tock Seng Hospital,The Life Church and Missions Singapore (146B Paya Lebar Road)","Lor Lew Lian, Singapore",1.3503431,103.8773085
+10,56,M,NCID,2020-01-29,True,Chinese,,Marina South Pier,,,
+11,31,F,NCID,2020-01-29,True,Chinese,,,,,
+12,37,F,NCID,2020-01-29,True,Chinese,"Village Hotel Sentosa (10 Artillery Avenue), Hotel 81 Princess (21 Lorong 12 Geylang) and Home Suite View Hotel (12 Lorong 12 Geylang)","Orchard Road, Geylang, Tan Tock Seng Hospital","12 Lor 12 Geylang, Singapore 398993",1.311557,103.8781402
+13,73,F,NCID,2020-01-30,True,Chinese,"Park Royal collection Pickering Street(3 Upper Pickering Street), Oasia hotel downtown(100 Peck Seah Street)","Changi Airport, Jewel","3 Upper Pickering St, Singapore 058289",1.2858085,103.8460908
+14,31,M,NCID,2020-01-30,True,Chinese (Singapore Work Pass Holder),Jurong East Street 13,,"Jurong East Street 13, Singapore",1.3370334,103.7372944
+15,47,F,NCID,2020-01-31,True,Singapore Citizen,,,,,
+16,38,M,SGH,2020-01-31,True,Chinese,Nathan Road,Singapore General Hospital,"Nathan Rd, Singapore",1.2962526,103.8257632
+17,47,F,NCID,2020-01-31,True,Singapore Citizen,,,,,
+18,31,F,NCID,2020-02-01,True,Chinese,Home Suite View Hotel (12 Lorong 12 Geylang),,"12 Lor 12 Geylang, Singapore 398993",1.311557,103.8781402
+19,28,F,SGH,2020-02-03,False,Singapore Citizen,Jalan Bukit Merah,"Yong Thai Hang (24 Cavan Road), Tan Tock Seng Hospital Emergency Department","Jalan Bukit Merah, Singapore",1.2835601,103.8193897
+20,48,F,NCID,2020-02-03,False,Singapore Citizen,Hougang Street 61,Yong Thai Hang (24 Cavan Road),"Hougang Street 61, Singapore",1.3747006,103.886414
+21,44,F,SGH,2020-02-03,False,Indonesian,Jalan Bukit Merah,,"Jalan Bukit Merah, Singapore",1.2835601,103.8193897
+22,41,M,NCID,2020-02-03,True,Singapore Citizen,,,,,
+23,17,M,NCID,2020-02-03,True,Singapore Citizen,,,,,
+24,32,F,NCID,2020-02-04,False,Singapore Citizen,Buangkok Green,"Yong Thai Hang 24 Cavan Road, Hougang Polyclinic, Jalan Besar","Buangkok Green, Singapore",1.3793342,103.8826989
+25,40,M,NCID,2020-02-04,False,Singapore Citizen,Buangkok Green,"Hougang Polyclinic, Diamond Industries Jewellery Company (Harbour Drive), Pasir Panjang Hawker Centre","Buangkok Green, Singapore",1.3793342,103.8826989
+26,42,F,NCID,2020-02-04,True,Chinese,,,,,
+27,45,M,NCID,2020-02-05,False,Singapore Citizen,Jalan Bukit Merah,"Tiong Bahru Plaza, Tiong Bahru Market, Beo Crescent Market and Food Centre","Jalan Bukit Merah, Singapore",1.2835601,103.8193897
+28,0,M,KKH,2020-02-05,False,Singapore Citizen,Jalan Bukit Merah,,"Jalan Bukit Merah, Singapore",1.2835601,103.8193897
+29,41,M,NCID,2020-02-05,False,Singapore Citizen,Mount Elizabeth Novena Hospital,,"38 Irrawaddy Rd, Singapore 329563",1.322236,103.8440388
+30,27,M,NCID,2020-02-06,False,Singapore Citizen,Shunfu Road,"Far East Square (19 China Street), Junction 8 (9 Bishan Place), Grand Hyatt Singapore","Shunfu Rd, Singapore",1.3519757,103.8374493
+31,53,M,CGH,2020-02-06,False,Singapore Citizen,Tampines Street 24,"Malaysia, The Life Church and Missions Singapore (146B Paya Lebar Road)","Tampines Street 24, Singapore",1.3553387,103.9517559
+32,42,F,NCID,2020-02-06,False,Singapore Citizen,Elias Road,"Victoria Junior College, Parkway East Hospital, Changi Airport, Singapore Zoo","Elias Rd, Singapore",1.3776651,103.9414407
+33,39,F,SKH,2020-02-06,False,Singapore Citizen,,"Malaysia, Sengkang General Hospital Emergency Department",,,
+34,40,F,NCID,2020-02-07,False,Singapore Citizen,Sin Ming Road,Yong Thai Hang,"Sin Ming Rd, Singapore",1.3558936,103.837786
+35,64,M,SGH,2020-02-07,False,Singapore Citizen,Henderson Crescent,"Redhill Market, Hawker centre at Bukit Merah, Bukit Merah Polyclinic","Henderson Cres, Singapore",1.288833,103.8217207
+36,38,F,NCID,2020-02-07,False,Singapore Permanent Resident,Bukit Batok Street 31,"Johor Bahru, KK Women's and Children's Hospital (KKH), Grand Hyatt Singapore, Ng Teng Fong General Hospital (NTFGH)","Bukit Batok Street 31, Singapore",1.3589162,103.7511175
+37,53,M,NCID,2020-02-07,False,Singapore Citizen,Jurong East Street 32,Ng Teng Fong General Hospital (NTFGH),"Jurong East Street 32, Singapore",1.3470214,103.7338564
+38,52,F,NCID,2020-02-08,False,Singapore Citizen,Choa Chu Kang Avenue 3,"Choa Chua Kang Polyclinic, The Life Church and Missions Singapore, Marina Bay Sands, Chinatown and Plaza Singapura","Choa Chu Kang Ave 3, Singapore",1.3801285,103.7413747
+39,51,M,NCID,2020-02-08,False,Singapore Citizen,Jurong West Central,"Malaysia, Grand Hyatt Singapore","Jurong West Central 1, Singapore",1.342604,103.7054434
+40,36,M,NCID,2020-02-08,False,Singapore Citizen,Bedok North Street,Yong Thai Hang,"Bedok North Street 3, Singapore",1.3328828,103.9265444
+41,71,M,NCID,2020-02-08,False,Singapore Citizen,Upper Serangoon Road,"Hougang Polyclinic, Tan Tock Seng Hospital Emergency Department, Paya Lebar Methodist Church (5 Boundary Road), Braddell Heights Residents' Committee, Pat's Schoolhouse Kovan (755 Upper Serangoon Road)","Upper Serangoon Rd, Singapore",1.3576474,103.8824703
+42,39,M,NCID,2020-02-08,False,Bangladesh (Singapore Work Pass Holder),The Leo Dormitory (25 Kaki Bukit Road),"Changi General Hospital, Bedok Polyclinic, Mustafa Centre (145 Syed Alwi Road), 8 Seletar Aerospace Heights","23 Kaki Bukit Rd 3, Singapore 415812",1.3372976,103.9038015
+43,54,M,SKH,2020-02-08,False,Singapore Citizen,Fernvale Close,"Malaysia, Resorts World Sentosa","Fernvale Cl, Singapore",1.3944623,103.879961
+44,37,M,KTPH,2020-02-09,False,Singapore Citizen,Sembawang Drive,"Certis Cisco Centre (20 Jalan Afifi), Chingay 2020","Sembawang Dr, Singapore",1.4526468,103.8169578
+45,2,F,KKH,2020-02-10,True,Singapore Citizen,,,,,
+46,35,M,NCID,2020-02-10,False,Singapore Permanent Resident,Johor Bahru,"Resort World Sentosa Casino (8 Sentosa Gateway), Tan Tock Seng Hospital","Johor Bahru, Johor, Malaysia",1.492659,103.7413591
+47,39,M,NCID,2020-02-10,False,Bangladesh (Singapore Work Pass Holder),Veerasamy Road,8 Seletar Aerospace Heights,"Veerasamy Rd, Singapore",1.3074459,103.8543547
+48,34,M,NCID,2020-02-11,False,Singapore Citizen,Bukit Batok Street 25,"Malaysia, Plaza Singapura (68 Orchard Road), Star Vista (1 Vista Exchange Green), Fusionopolis (1 Fusionopolis Place), Grace Assembly of God (Tanglin) (355 Tanglin Road), Grace Assembly of God (Bukit Batok) (1 Bukit Batok West Avenue 4)","Bukit Batok Street 25, Singapore",1.3438522,103.7609115
+49,46,M,NUH,2020-02-11,False,Singapore Citizen,Toh Guan Road,"Grace Assembly of God (Tanglin), Grace Assembly of God (Bukit Batok)","Toh Guan Rd, Singapore",1.3363443,103.7475947
+50,62,M,NCID,2020-02-12,False,Singapore Citizen,Mei Hwan Drive,DBS Asia Central at Marina Bay Financial Centre (12 Marina Boulevard),"Mei Hwan Dr, Singapore",1.3538357,103.8604674
+51,48,M,NCID,2020-02-12,False,Singapore Citizen,Bishan Street 13,"Grace Assembly of God (Tanglin), Grace Assembly of God (Bukit Batok)","Bishan Street 13, Singapore",1.3497297,103.8536992
+52,37,M,NCID,2020-02-12,False,Bangladesh (Singapore Work Pass Holder),Campbell Lane,"8 Seletar Aerospace Heights, Tan Tock Seng Hospital","Campbell Ln, Singapore",1.3054837,103.8522738
+53,54,M,NCID,2020-02-12,False,Singapore Citizen,Hillview Avenue,"Grace Assembly of God, National University of Singapore","Hillview Ave, Singapore",1.3596007,103.7638949
+54,55,F,NCID,2020-02-13,False,Singapore Citizen,Ang Mo Kio Avenue 5,Grace Assembly of God (Tanglin) (355 Tanglin Road),"Ang Mo Kio Ave 5, Singapore",1.376001,103.8561138
+55,30,M,NCID,2020-02-13,False,Singapore Citizen,Mei Hwan Drive,"Pulau Bukom, Church of Christ the King (2221 Ang Mo Kio Avenue 8)","Mei Hwan Dr, Singapore",1.3538357,103.8604674
+56,30,M,NCID,2020-02-13,False,Bangladesh (Singapore Work Pass Holder),,"Seletar Aerospace Heights Construction Site, Tan Tock Seng Hospital, Government quarantine facility",,,
+57,26,M,NCID,2020-02-13,False,Singapore Citizen,Senja Road,"Grace Assembly of God (Tanglin), Grace Assembly of God (Bukit Batok)","Senja Rd, Singapore",1.3866896,103.7619298
+58,55,M,NCID,2020-02-13,False,Singapore Citizen,Jalan Kelichap,"Grace Assembly of God (Tanglin), Grace Assembly of God (Bukit Batok)","Jln Kelichap, Singapore",1.3468834,103.8813653
+59,61,M,NCID,2020-02-13,False,Singapore Citizen,Wilkinson Road,"Farrer Park Hospital Emergency Care Clinic, Mount Elizabeth Hospital Emergency Department","Wilkinson Rd, Singapore",1.3026352,103.8908503
+60,51,F,NCID,2020-02-13,False,Singapore Citizen,Ang Mo Kio Ave 3,Grace Assembly of God (Tanglin),"Ang Mo Kio Ave 3, Singapore",1.3689086,103.8572848
+61,57,M,NUH,2020-02-13,False,Singapore Citizen,Jurong West Street 64,"Ng Teng Fong General Hospital, Pioneer Polyclinic, Legacy Office Supplies Pte Ltd (56 Senang Crescent)","Jurong West Street 64, Singapore",1.341031,103.7039373
+62,44,F,SGH,2020-02-13,False,Singapore Citizen,Tanjong Pagar Road,,"Tg Pagar Rd, Singapore",1.276365,103.8434479
+63,54,F,NCID,2020-02-14,False,Singapore Citizen,Potong Pasir Avenue 3,"PUB, Marisson Hotel Bugis (103 Beach Road)","Potong Pasir Ave 3, Singapore",1.3336139,103.8651988
+64,50,M,NUH,2020-02-14,False,Singapore Citizen,Jurong West Street 81,Taxi Driver,"Jurong West Street 81, Singapore",1.3471387,103.6951024
+65,61,F,NCID,2020-02-14,False,Singapore Citizen,Mei Hwan Drive,Church of Christ the King (2221 Ang Mo Kio Avenue 8),"Mei Hwan Dr, Singapore",1.3538357,103.8604674
+66,28,M,NCID,2020-02-14,False,Singapore Citizen,Mei Hwan Drive,"Grace Assembly of God, God's Kingdom Bread of Life Church (37 Jalan Pemimpin)","Mei Hwan Dr, Singapore",1.3538357,103.8604674
+67,56,F,NCID,2020-02-14,False,Singapore Citizen,Jurong West Street 64,"Grace Assembly of God (Bukit Batok), Ng Teng Fong General Hospital, NUH","Jurong West Street 64, Singapore",1.341031,103.7039373
+68,79,F,NCID,2020-02-14,False,Singapore Citizen,Mei Hwan Drive,Bethany Presbyterian Church (344A Paya Lebar Road),"Mei Hwan Dr, Singapore",1.3538357,103.8604674
+69,26,M,NCID,2020-02-15,False,Bangladesh (Singapore Work Pass Holder),,Government quarantine facility,,,
+70,27,F,NCID,2020-02-15,False,Singapore Citizen,Mei Hwan Drive,"God's Kingdom Bread of Life Church (37 Jalan Pemimpin), HipVan Singapore (19 Kallang Avenue)","Mei Hwan Dr, Singapore",1.3538357,103.8604674
+71,25,M,NCID,2020-02-15,False,Singapore Citizen,Fernvale Road,"Fernvale Lane, God's Kingdom Bread of Life (37 Jalan Pemimpin)","Fernvale Rd, Singapore",1.3936113,103.87613
+72,40,M,NCID,2020-02-15,False,Chinese (Singapore Work Pass Holder),Woodlands Crescent,"Marina Bay Sands Casino (10 Bayfront Avenue), Aim Heng Car Services Pte Ltd (Woodlands Industrial Park)","Woodlands Cres, Singapore",1.4468524,103.8024146
+73,43,M,NCID,2020-02-15,False,Singapore Citizen,Lorong 8 Toa Payoh,Grace Assembly of God (Tanglin) (355 Tanglin Road),"Lor 8 Toa Payoh, Singapore",1.3397838,103.8564707
+74,29,M,AH,2020-02-15,False,Singapore Citizen,Mei Ling Street,"Alexandra Hospital Urgent Care Centre, Hi-Yew Technology Pte Ltd (3031A Ubi Road)","Mei Ling St, Singapore",1.2942719,103.8031883
+75,71,F,NCID,2020-02-16,False,Singapore Citizen,,,,,
+76,1,M,KKH,2020-02-16,True,Singapore Citizen,,,,,
+77,35,M,NCID,2020-02-17,False,Singapore Citizen,McNair Road,Tan Tock Seng Hospital,"McNair Rd, Singapore",1.3200278,103.8585331
+78,57,F,NCID,2020-02-17,False,Singapore Citizen,Dairy Farm,VWO-run Community Hospital,"3 Lim Chu Kang Lane 4, Singapore 718859",1.431605,103.7099001
+79,35,F,NCID,2020-02-17,False,Malaysian (Singapore Work Pass Holder),Woodlands Crescent,FoodXchange@Admiralty (8A Admiralty Street),"Woodlands Cres, Singapore",1.4468524,103.8024146
+80,38,F,NUH,2020-02-18,False,Singapore Citizen,Fernvale Link,National University Hospital,"Fernvale Link, Singapore",1.3940459,103.8790491
+81,50,M,NCID,2020-02-18,False,Singapore Citizen,Lower Delta Road,,"Lower Delta Rd, Singapore",1.2806387,103.8236385
+82,57,F,NTFGH,2020-02-18,False,Singapore Citizen,Jurong West Street 41,"Ng Teng Fong General Hospital, Jurong Polyclinic","Jurong West Street 41, Singapore",1.3482954,103.7232588
+83,54,M,NCID,2020-02-19,False,Singapore Citizen,Rivervale Drive,"Philemon Singapore Pte Ltd (16 Kallang Place), Malaysia","Rivervale Dr, Singapore",1.3872989,103.9045675
+84,35,F,NCID,2020-02-19,False,Singapore Citizen,Aljunied Road,"Lonza Biologics (35 Tuas South Avenue 6), Bugis Junction","Aljunied Rd, Singapore",1.3223031,103.8814376
+85,36,M,NCID,2020-02-20,False,Chinese (Singapore Work Pass Holder),Woodlands Ave 6,Khoo Teck Puat Hospital,"Woodlands Ave 6, Singapore",1.4387944,103.8030299
+86,24,M,NTFGH,2020-02-20,False,Singapore Citizen,Bukit Batok East Avenue 5,,"Bukit Batok East Ave 5, Singapore",1.3532617,103.7549128
+87,32,M,NCID,2020-02-21,True,Singapore Citizen,,,,,
+88,30,F,NCID,2020-02-21,False,Singapore Citizen,Hougang St 91,,"Hougang Street 91, Singapore",1.3771029,103.8821387
+89,41,M,NCID,2020-02-22,False,Singapore Permanent Resident,Serangoon Ave 3,"Affinity Equity Partners (8 Temasek Boulevard), Bishan Community Club (51 Bishan St 13)","Serangoon Ave 3, Singapore",1.3515054,103.8682342
+90,75,F,NCID,2020-02-23,False,Singapore Citizen,Bishan Street 12,Tan Tock Seng Hospital,"Bishan Street 12, Singapore",1.3462578,103.8508062
+91,58,F,NCID,2020-02-22,False,Singapore Citizen,Rivervale Drive,,"Rivervale Dr, Singapore",1.3872989,103.9045675
+92,47,M,SKH,2020-02-26,False,Singapore Citizen,Serangoon Ave 3,,"Serangoon Ave 3, Singapore",1.3515054,103.8682342
+93,38,M,NTFGH,2020-02-26,False,Singapore Citizen,Bukit Batok Street 31,,"Bukit Batok Street 31, Singapore",1.3589162,103.7511175
+94,64,F,SGH,2020-02-26,False,Singapore Citizen,Jalan Jurong Kechil,,"Jln Jurong Kechil, Singapore",1.3429015,103.7704492
+95,44,M,NCID,2020-02-27,False,Singapore Citizen,Choa Chu Kang Crescent,"Sport Singapore (3 Stadium Drive), Singapore Aviation Academy (1 Aviation Drive), Toa Payoh Hub (490 Lorong 6 Toa Payoh), Toa Payoh Sport Centre (297 Lorong 6 Toa Payoh)","Choa Chu Kang Cres, Singapore",1.4032103,103.7484734
+96,12,M,KKH,2020-02-27,False,Singapore Citizen,Jalan Jurong Kechil,Raffles Institution,"Jln Jurong Kechil, Singapore",1.3429015,103.7704492
+97,44,F,NCID,2020-02-27,False,Singapore Permanent Resident,Choa Chu Kang North 5,"Wizlearn Technologies Pte Ltd, Agency for Integrated Care (5 Maxwell Road)","Choa Chu Kang North 5, Singapore",1.3919048,103.7467749
+98,24,M,NCID,2020-02-28,False,Singapore Permanent Resident,Jurong West St 61,,"Jurong West Street 61, Singapore",1.3385893,103.6984964
+99,27,M,NCID,2020-02-28,False,Singapore Citizen,Jurong West St 81,Pioneer Polyclinic,"Jurong West Street 81, Singapore",1.3471387,103.6951024
+100,20,M,NCID,2020-02-28,False,Malaysian,Holland Ave,,"Holland Ave, Singapore",1.3090088,103.7950497
+101,61,M,NTFGH,2020-02-29,False,Singapore Citizen,Bukit Batok St 24,"Batam, Asia Asset Recovery Pte Ltd (2019 Bukit Batok Industrial Park A), Eye Clinic @ NTFGH","Bukit Batok Street 24, Singapore",1.3425888,103.7563114
+102,41,F,NTFGH,2020-02-29,False,Filipino (Singapore Work Pass Holder),Bukit Batok St 24,Eye Clinic @ NTFGH,"Bukit Batok Street 24, Singapore",1.3425888,103.7563114
+103,37,F,NCID,2020-03-01,False,Singapore Citizen,Bukit Batok St 31,"Batam, Asia Asset Recovery Pte Ltd (2019 Bukit Batok Industrial Park A)","Bukit Batok Street 31, Singapore",1.3589162,103.7511175
+104,25,F,NCID,2020-03-01,False,Myanmar (Singapore Work Pass Holder),Bukit Batok St 31,Batam,"Bukit Batok Street 31, Singapore",1.3589162,103.7511175
+105,49,M,NCID,2020-03-01,False,Singapore Citizen,Upper Bukit Timah,Toa Payoh Hub (490 Lor 6 Toa Payoh),"Upper Bukit Timah Rd, Singapore",1.3584451,103.7675295
+106,54,M,CGH,2020-03-01,False,Japanese (Singapore Work Pass Holder),Tampines Street 45,WinTech Nano-Technology Services Pte Ltd (10 Science Park Road),"Tampines Street 45, Singapore",1.3591474,103.9577982
+107,68,F,NCID,2020-03-01,False,Singapore Citizen,Bishan Street 13,"Jakarta (Indonesia), Tan Tock Seng Hospital","Bishan Street 13, Singapore",1.3497297,103.8536992
+108,34,F,NTFGH,2020-03-02,False,Filipino (Singapore Work Pass Holder),Bukit Batok St 24,,"Bukit Batok Street 24, Singapore",1.3425888,103.7563114
+109,70,M,SGH,2020-03-02,False,Singapore Citizen,Everton Park,Fish Market Sakuraya (154 West Coast Road),"Everton Park, Singapore",1.2770544,103.8399439
+110,33,M,NCID,2020-03-03,False,Singapore Citizen,Upper Boon Keng Road,Wizlearn Technologies Pte Ltd,"Upper Boon Keng Rd, Singapore",1.314381,103.8720873
+111,43,M,NUH,2020-03-03,False,Singapore Permanent Resident,Compassvale Street,"Malaysia, Sengkang General Hospital","Compassvale St, Singapore",1.3951499,103.8980618
+112,62,F,NCID,2020-03-04,False,Singapore Citizen,,"Creative O Preschoolers' Bay (31 International Business Park), Bukit Batok Polyclinic",,,
+113,42,M,NCID,2020-03-04,True,French (Singapore Work Pass Holder),Mount Sophia,"France, Portugal, UK, Istanbul, Gleneagles Hospital","Mount Sophia, Singapore",1.3010931,103.8466826
+114,62,M,NUH,2020-03-04,False,Singapore Citizen,Westwood Avenue Area,,"Westwood Ave, Singapore",1.3511997,103.6990227
+115,62,F,NUH,2020-03-05,False,Singapore Citizen,Westwood Avenue Area,"SAFRA Jurong, Pioneer Polyclinic","Westwood Ave, Singapore",1.3511997,103.6990227
+116,50,F,NCID,2020-03-05,False,Singapore Citizen,Jurong West Street 81,SAFRA Jurong,"Jurong West Street 81, Singapore",1.3471387,103.6951024
+117,52,F,NCID,2020-03-05,False,Singapore Citizen,Senja Road,"SAFRA Jurong, Malaysia, Shops at 131 Marsiling Rise, Shops at 731 Yishun Street 72, Petir Park (141 Petir Road), Zhenghua Nature Park (466 Segar Road)","Senja Rd, Singapore",1.3866896,103.7619298
+118,33,F,NUH,2020-03-06,False,Singapore Citizen,Westwood Avenue Area,Pioneer Polyclinic,"Westwood Ave, Singapore",1.3511997,103.6990227
+119,55,M,AH,2020-03-06,False,Singapore Citizen,Stirling Road,,"Stirling Rd, Singapore",1.2953328,103.8043994
+120,62,F,NCID,2020-03-06,False,Singapore Citizen,Jurong West Street 65,"SAFRA Jurong, Boon Lay Shopping Centre (221 Boon Lay Place)","Jurong West Street 65, Singapore",1.339965,103.7010383
+121,54,F,NCID,2020-03-06,False,Singapore Citizen,Corporation Drive,SAFRA Jurong,"Corporation Dr, Singapore",1.3330012,103.7231731
+122,64,F,NCID,2020-03-06,False,Singapore Citizen,Petir Road,"Westgate (3 Gateway Drive), Keat Hong Community Club (2 Choa Chu Kang Loop)","Petir Rd, Singapore",1.3748748,103.7709517
+123,47,M,SKH,2020-03-06,True,Singapore Citizen,Fernvale Close,"South Africa, France","Fernvale Cl, Singapore",1.3944623,103.879961
+124,37,F,NCID,2020-03-06,True,Singapore Permanent Resident,Admiralty Link,Germany,"Admiralty Link, Singapore",1.4552133,103.8175844
+125,65,F,NCID,2020-03-06,False,Singapore Citizen,Jurong West Street 72,SAFRA Jurong,"Jurong West Street 72, Singapore",1.346019,103.6990308
+126,77,M,NCID,2020-03-05,False,Singapore Citizen,Eunos Crescent,Singapore General Hospital,"Eunos Cres, Singapore",1.3215095,103.9037357
+127,64,F,NCID,2020-03-05,False,Singapore Citizen,Bukit Panjang Road,,"Bukit Panjang Rd, Singapore",1.3791024,103.7693155
+128,70,M,NCID,2020-03-06,False,Singapore Citizen,Jurong West Street 72,SAFRA Jurong,"Jurong West Street 72, Singapore",1.346019,103.6990308
+129,68,F,NTFGH,2020-03-06,False,Singapore Citizen,Jurong West Street 71,"Pioneer Polyclinic, Shop at 966 Jurong West Street 91, Jurong Port Road Food Centre (29A Jurong Port Road)","Jurong West Street 71, Singapore",1.342723,103.6954423
+130,66,M,NTFGH,2020-03-06,False,Singapore Citizen,Jurong West Street 71,"Jurong Port Road Food Centre, Bukit Batok Community Club (21 Bukit Batok Central)","Jurong West Street 71, Singapore",1.342723,103.6954423
+131,66,M,NTFGH,2020-03-06,False,Singapore Citizen,Pandan Gardens,"Liang Guan Hak Kee (8 Pandan Crescent), Ayer Rajah Zone 3 Residents? Committee (32 Teban Gardens Road)","Pandan Gardens, Singapore",1.3206434,103.7484672
+132,37,F,NUH,2020-03-06,True,Singapore Permanent Resident,Tanglin Road,Camden Medical Centre (1 Orchard Boulevard),"Tanglin Rd, Singapore",1.3019176,103.8193604
+133,62,F,NUH,2020-03-06,False,Indonesian (Singapore Social Visit Pass Holder),Jurong West Street 61,Pioneer Polyclinic,"Jurong West Street 61, Singapore",1.3385893,103.6984964
+134,56,F,NCID,2020-03-06,False,Singapore Citizen,Jurong West Street 71.,Malaysia,"Jurong West Street 71, Singapore",1.342723,103.6954423
+135,40,M,SGH,2020-03-06,False,Singapore Citizen,Telok Blangah Crescent,ST Electronics (100 Jurong East Street 21),"Telok Blangah Cres, Singapore",1.2770566,103.820226
+136,36,M,NCID,2020-03-06,True,Italian (Singapore Work Pass Holder),Tanjong Pagar Road,"United States, Italy, Raffles Hospital","Tg Pagar Rd, Singapore",1.276365,103.8434479
+137,60,M,NCID,2020-03-06,False,Singapore Citizen,Jurong West Street 41,SAFRA Jurong,"Jurong West Street 41, Singapore",1.3482954,103.7232588
+138,26,M,NCID,2020-03-06,False,Singapore Citizen,Rivervale Drive,SAFRA Punggol (9 Sentul Crescent),"Rivervale Dr, Singapore",1.3872989,103.9045675
+139,71,M,NTFGH,2020-03-07,False,Singapore Citizen,Jurong West Street 81,,"Jurong West Street 81, Singapore",1.3471387,103.6951024
+140,62,F,NTFGH,2020-03-07,False,Singapore Citizen,Jurong West Street 81,Landom Distributions Pte Ltd (31 Jurong Port Road),"Jurong West Street 81, Singapore",1.3471387,103.6951024
+141,69,M,NTFGH,2020-03-07,False,Singapore Citizen,Jurong West Street 64,Nanyang Technological University (NTU) Innovation Centre (71 Nanyang Drive),"Jurong West Street 64, Singapore",1.341031,103.7039373
+142,26,M,NTFGH,2020-03-07,False,Singapore Citizen,Jurong West Street 81,"First Page Digital Singapore (144 Robinson Road), The Aperia Mall (12 Kallang Avenue)","Jurong West Street 81, Singapore",1.3471387,103.6951024
+143,42,M,NUH,2020-03-07,False,Singapore Permanent Resident,Tanglin Road,Thailand,"Tanglin Rd, Singapore",1.3019176,103.8193604
+144,58,F,NTFGH,2020-03-07,False,Singapore Citizen,Jurong West Street 74,,"Jurong West Street 74, Singapore",1.3493888,103.6992194
+145,67,F,NCID,2020-03-08,False,Singapore Citizen,Teck Whye Lane,16 Teck Whye Lane,"Teck Whye Ln, Singapore",1.3788984,103.7526191
+146,64,F,NCID,2020-03-08,False,Singapore Citizen,Yio Chu Kang Road,,"Yio Chu Kang Rd, Singapore",1.387754,103.8417085
+147,64,M,NCID,2020-03-08,True,Indonesian,Oxley Road,Seletar Airport,"Oxley Rd, Singapore",1.2979588,103.841037
+148,67,F,NCID,2020-03-08,False,Singapore Citizen,Jalan Lim Tai See,"Indonesia, Marina Bay Sands Casino (10 Bayfront Avenue)","Jln Lim Tai See, Singapore",1.3216783,103.7935352
+149,62,M,NCID,2020-03-08,False,Singapore Citizen,Jurong East St 32,"Tan Tock Seng Hospital, Tong Whye Temple Senior Citizen Club (306 Jurong East Street 32).","Jurong East Street 32, Singapore",1.3470214,103.7338564
+150,53,F,NCID,2020-03-08,False,Singapore Permanent Resident,Jurong West St 64,Nanyang Community Club,"Jurong West Street 64, Singapore",1.341031,103.7039373
+151,51,M,NCID,2020-03-08,False,Singapore Citizen,Yishun Ring Road,"Yishun Polyclinic, Mei Hwan Drive","Yishun Ring Rd, Singapore",1.4260876,103.8321594
+152,65,M,SGH,2020-03-08,True,Indonesian,,Indonesia,,,
+153,65,F,SGH,2020-03-08,True,Singapore Citizen,Jalan Teck Whye,"Indonesia, Choa Chu Kang Polyclinic","Jln Teck Whye, Singapore",1.3799998,103.7576493
+154,52,M,NCID,2020-03-09,True,British,Raffles Hotel (1 Beach Road),"Switzerland, United Kingdom","1 Beach Rd, Singapore 189673",1.2948829,103.8544791
+155,47,F,NCID,2020-03-09,False,Malaysian (Singapore Work Pass holder),Boon Lay Place,,"Boon Lay, Singapore",1.3142556,103.7093099
+156,50,F,NCID,2020-03-09,False,Singapore Permanent Resident,Jurong West Street 74,,"Jurong West Street 74, Singapore",1.3493888,103.6992194
+157,54,F,NCID,2020-03-09,False,Singapore Permanent Resident,Jurong West Street 81,,"Jurong West Street 81, Singapore",1.3471387,103.6951024
+158,53,F,NTFGH,2020-03-09,False,Singapore Citizen,Pending Road,Farrer Park Hospital (1 Farrer Park),"Pending Rd, Singapore",1.3762379,103.7710963
+159,59,M,NTFGH,2020-03-09,False,Singapore Citizen,Pending Road,Farrer Park Hospital (1 Farrer Park),"Pending Rd, Singapore",1.3762379,103.7710963
+160,5,M,KKH,2020-03-09,False,Singapore Citizen,Teck Whye Lane,The Orange Tree Preschool @ Choa Chu Kang (10 Choa Chu Kang Road),"Teck Whye Ln, Singapore",1.3788984,103.7526191
+161,73,M,NCID,2020-03-09,False,Singapore Citizen,Bishan Street 13,,"Bishan Street 13, Singapore",1.3497297,103.8536992
+162,28,M,NCID,2020-03-09,False,Singapore Citizen,Kim Tian Road,"Indonesia, Shop at 26 Jalan Membina","Kim Tian Rd, Singapore",1.2825306,103.8276362
+163,27,F,NCID,2020-03-09,False,Singapore Citizen,Redhill Road,"Funan Mall (107 North Bridge Road), PUB Recreation Club (48 Woodleigh Park)","Redhill Rd, Singapore",1.2876447,103.8161531
+164,57,F,NCID,2020-03-10,False,Singapore Permanent Resident,Jurong West St 93,,"Jurong West Street 93, Singapore",1.3381307,103.6930683
+165,30,M,NCID,2020-03-10,True,Singapore Citizen,Jalan Mulia,France,"Jln Mulia, Singapore",1.3329136,103.8801177
+166,55,F,NTFGH,2020-03-10,False,Singapore Citizen,Bukit Panjang Road,Samwoh Corporate Pte Ltd (25E Sungei Kadut Street 1),"Bukit Panjang Rd, Singapore",1.3791024,103.7693155
+167,35,F,NTFGH,2020-03-10,False,Filipino (Singapore Work Pass holder),,"Philippines, NTFGH",,,
+168,47,M,SKH,2020-03-10,False,Singapore Citizen,Rivervale Street,,"Rivervale St, Singapore",1.3884218,103.9034649
+169,40,M,KTPH,2020-03-10,True,Singapore Citizen,Yishun Street 81,"France, Health Promotion Board","Yishun Street 81, Singapore",1.4150832,103.8373311
+170,56,F,SGH,2020-03-10,True,Indonesian,,Indonesia,,,
+171,27,M,NCID,2020-03-11,True,Singapore Citizen,Jalan Haji Salam,"France, Spain","Jln Haji Salam, Singapore",1.3205803,103.9529535
+172,42,F,NCID,2020-03-11,True,Filipino (Singapore Work Pass holder),Lorong 28 Geylang,"Philippines, AXA Singapore (8 Shenton Way)","Lor 28 Geylang, Singapore",1.31212,103.8855967
+173,31,M,NCID,2020-03-11,True,Singapore Citizen,Telok Blangah Street 31,France,"Telok Blangah Street 31, Singapore",1.2751923,103.8067513
+174,67,F,NCID,2020-03-11,False,Singapore Citizen,Gangsa Road,,"Gangsa Rd, Singapore",1.3778066,103.7663345
+175,44,M,NCID,2020-03-11,True,Singapore Citizen,Toh Tuck Road,France,"Toh Tuck Rd, Singapore",1.3397261,103.7661564
+176,37,F,NCID,2020-03-11,True,British,Dover Road area,"Japan, United Kingdom, Gleneagles Hospital","Dover Rd, Singapore",1.3038134,103.7794423
+177,26,M,NCID,2020-03-11,True,Singapore Citizen,Telok Blangah St 31,"United States, United Kingdom, France","Telok Blangah Street 31, Singapore",1.2751923,103.8067513
+178,37,M,NTFGH,2020-03-11,True,Filipino (Singapore Work Pass holder),Jurong East St 21,Philippines,"Jurong East Street 21, Singapore",1.3369686,103.7433703
+179,66,F,NUH,2020-03-11,False,Singapore Citizen,Jurong West St 73,,"Jurong West Street 73, Singapore",1.3471723,103.699818
+180,71,M,NCID,2020-03-12,True,Singapore Citizen,Bishan Street 23,,"Bishan Street 23, Singapore",1.3561586,103.8475747
+181,83,M,Gleneagles Hospital,2020-03-12,True,Indonesian,Bukit Timah Road,Indonesia,"Bukit Timah Rd, Singapore",1.3228014,103.8151035
+182,76,F,Gleneagles Hospital,2020-03-12,True,Indonesian,Bukit Timah Road,Indonesia,"Bukit Timah Rd, Singapore",1.3228014,103.8151035
+183,29,M,NCID,2020-03-12,True,Singapore Citizen,Bukit Panjang Ring Road,"Malaysia, Masjid Al-Muttaqin (5140 Ang Mo Kio Avenue 6), Masjid Al-Iman (10 Bukit Panjang Ring Road), Masjid Kassim (450 Changi Road), Masjid Hajjah Fatimah (4001 Beach Road), Pergas (448 Changi Road)","Bukit Panjang Ring Rd, Singapore",1.3863791,103.7645466
+184,35,M,NCID,2020-03-12,False,Filipino (Singapore Work Pass Holder),Lorong 28 Geylang,,"Lor 28 Geylang, Singapore",1.31212,103.8855967
+185,34,M,NCID,2020-03-12,False,Singapore Citizen,Circuit Road,,"Circuit Rd, Singapore",1.3263918,103.8883199
+186,64,M,NCID,2020-03-12,False,Singapore Citizen,Woodlands Street 13,Samwoh Corporate Pte Ltd (25E Sungei Kadut Street 1),"Woodlands Street 13, Singapore",1.4349802,103.7776654
+187,48,M,NCID,2020-03-12,True,Singapore Citizen,Whampoa Drive,"Malaysia, Masjid Hajjah Rahimabi Kebun Limau (76 Kim Keat Road)","Whampoa Dr, Singapore",1.3235847,103.8565156
+188,53,M,KTPH,2020-03-12,True,Singapore Citizen,Yishun Street 51,"Northpoint City (930 Yishun Avenue 2), 743 Yishun Avenue 5","Yishun Street 51, Singapore",1.4164431,103.8435347
+189,36,M,NCID,2020-03-12,True,Indian (Singapore Work Pass Holder),St George's Road,Sumitomo Mitsui Banking Corporation (3 Temasek Ave),"St George's Rd, Singapore",1.3231352,103.862383
+190,53,M,NCID,2020-03-13,False,Singapore Citizen,,,,,
+191,24,F,NCID,2020-03-13,True,Malaysian (Singapore Work Pass Holder),,,,,
+192,32,M,NCID,2020-03-13,True,American,,,,,
+193,26,M,NCID,2020-03-13,True,Malaysian (Singapore Work Pass Holder),,"Germany, Czech Republic, Austria, Hungary",,,
+194,24,F,NCID,2020-03-13,True,Chinese (Singapore Work Pass Holder),,"Germany, Czech Republic, Austria, Hungary",,,
+195,47,M,NCID,2020-03-13,True,Singapore Citizen,,"United States, Canada",,,
+196,73,F,NCID,2020-03-13,False,Singapore Citizen,,,,,
+197,30,M,NCID,2020-03-13,True,Singapore Citizen,,Malaysia,,,
+198,61,F,NCID,2020-03-13,False,Singapore Citizen,,,,,
+199,37,M,NCID,2020-03-13,True,Singapore Citizen,,Malaysia,,,
+200,62,F,NCID,2020-03-13,False,Singapore Citizen,,,,,
+201,52,F,NTFGH,2020-03-13,False,Singapore Citizen,Teck Whye Lane,,"Teck Whye Ln, Singapore",1.3788984,103.7526191
+202,44,M,SKH,2020-03-13,True,Singapore Citizen,Anchorvale Drive,"Malaysia, Masjid Al-Mawaddah (151 Compassvale Bow), Masjid Jamae (Chulia) (218 South Bridge Road) and Masjid Al-Istiqamah (2 Serangoon North Avenue 2)","Anchorvale Dr, Singapore",1.3906074,103.8894421
+203,36,F,CGH,2020-03-13,True,Singapore Citizen,Pasir Ris Street 51,Indonesia,"Pasir Ris Street 51, Singapore",1.3682213,103.9495464
+204,32,M,SGH,2020-03-13,True,American (Singapore Work Pass Holder),Tanjong Pagar Road,,"Tg Pagar Rd, Singapore",1.276365,103.8434479
+205,30,F,NCID,2020-03-14,True,Filipino (Singapore Long Term Visit Pass Holder),Flora Drive,"Philippines, DNATA Cargo (45 Airport Cargo Road)","Flora Dr, Singapore",1.3565253,103.9653785
+206,33,F,NCID,2020-03-14,True,New Zeland (Singapore Long Term Visit Pass Holder),Upper Paya Lebar Road,United States,"Upper Paya Lebar Rd, Singapore",1.3431579,103.8828346
+207,40,F,NCID,2020-03-14,True,Singapore Citizen,Yishun Central,United Kingdom,"Yishun Central, Singapore",1.4263378,103.8405467
+208,26,F,NCID,2020-03-14,False,Singapore Citizen,Tiong Bahru Road,Singapore General Hospital,"Tiong Bahru Rd, Singapore",1.2865598,103.8247352
+209,32,F,SGH,2020-03-14,True,Singapore Citizen,Serangoon Avenue 3,"United States, Singapore General Hospital","Serangoon Ave 3, Singapore",1.3515054,103.8682342
+210,56,M,NCID,2020-03-14,True,German (Singapore Long Term Visit Pass Holder),Leedon Park,"Germany, Switzerland","Leedon Park, Singapore",1.316294,103.7960433
+211,35,F,NCID,2020-03-14,False,Filipino (Singapore Long Term Visit Pass Holder),Crawford Lane,,"Crawford Ln, Singapore",1.3050562,103.8624671
+212,64,M,NCID,2020-03-14,True,Indonesian,Ibis Hotel Novena (6 Irrawaddy Road),Mount Elizabeth Hospital,"6 Irrawaddy Rd, Singapore 329543",1.3262077,103.8456258
+213,48,M,SKH,2020-03-14,True,Singapore Citizen,Serangoon North Avenue 3,Indonesia,"Serangoon North Ave 3, Singapore",1.3729806,103.8715518
+214,29,M,NCID,2020-03-14,False,Singapore Citizen,Jurong West Street 71,"Youth Go! (403 Fajar Road), Project 180 @ Simei (145 Simei Street 2) and Singapore University of Social Sciences (463 Clementi Road)","Jurong West Street 71, Singapore",1.342723,103.6954423
+215,65,M,SGH,2020-03-14,True,Singapore Citizen,Mei Ling Street,"Thailand, Cash Box (1 Jurong West Central 2)","Mei Ling St, Singapore",1.2942719,103.8031883
+216,30,M,NCID,2020-03-14,True,Singapore Citizen,Bukit Batok West Avenue 6,"Germany, Czech Republic, SAP Asia (30 Pasir Panjang Road)","Bukit Batok West Ave 6, Singapore",1.3534023,103.7430789
+217,22,M,NCID,2020-03-14,True,Spanish (Singapore Long Term Pass Holder),Mount Sophia,,"Mount Sophia, Singapore",1.3010931,103.8466826
+218,55,F,NUH,2020-03-14,False,Singapore Citizen,Pending Road,,"Pending Rd, Singapore",1.3762379,103.7710963
+219,30,M,SKH,2020-03-14,False,Singapore Citizen,Bishan St 22,"Sengkang Fire Station, Meiben Mold Manufacture Pte Ltd (26 Ang Mo Kio Industrial Park 2), Furama Riverfront (405 Havelock Road)","Bishan Street 22, Singapore",1.3573661,103.8452482
+220,53,M,NCID,2020-03-15,True,Singapore Permanent Resident,Dover Rise,France,"Dover Rise, Singapore",1.3041509,103.7848432
+221,28,F,NCID,2020-03-15,False,Filipino (Singapore Work Pass Holder),Tanjong Pagar Road,"MY World Preschool Ltd (52 Lengkok Bahru), Training Masters Workforce Institute (10 Arumugan Road), OUE Downtown Gallery (6A Shenton Way)","Tg Pagar Rd, Singapore",1.276365,103.8434479
+222,41,M,NCID,2020-03-15,True,French (Singapore Work Pass Holder),Kensington Park Road,"France, Spain, Philippines, Airbus Singapore Pte Ltd (12 Seletar Aerospace Link)","Kensington Park Rd, Singapore",1.3667825,103.8664548
+223,60,M,NCID,2020-03-15,True,Singapore Citizen,Serangoon Garden Terrace,"United States, Australia","Serangoon Garden Terrace, Singapore",1.3657069,103.8605811
+224,50,M,NCID,2020-03-15,False,Singapore Citizen,Senja Road,Malaysia,"Senja Rd, Singapore",1.3866896,103.7619298
+225,63,M,NCID,2020-03-15,True,Singapore Citizen,Newton Road,"Indonesia, Mount Elizabeth Hospital","Newton Rd, Singapore",1.3162825,103.8413256
+226,49,M,NCID,2020-03-15,True,Dutch,Sixth Avenue,"The Netherlands, Gleneagles Hospital","Sixth Ave, Singapore",1.3239884,103.7920182
+227,53,M,NUH,2020-03-15,True,Singapore Citizen,Pasir Panjang Road,France,"Pasir Panjang Rd, Singapore",1.281157,103.7845215
+228,67,M,CGH,2020-03-15,False,Singapore Citizen,Sea Breeze Avenue,Bedok Polyclinic,"Sea Breeze Ave, Singapore",1.3374304,103.9527258
+229,26,F,NCID,2020-03-15,True,Singapore Permanent Resident,Kim Keat Road,Spain,"Kim Keat Rd, Singapore",1.3252133,103.8536728
+230,38,F ,NCID,2020-03-15,True,Singapore Citizen,Ewe Boon Road,Eastern Europe,"Ewe Boon Rd, Singapore",1.3166272,103.8308603
+231,78,M,SGH,2020-03-15,True,Australian (Singapore Work Pass Holder),Robertson Quay,United States,"Robertson Quay, Singapore",1.2916428,103.8375112
+232,65,F,SGH,2020-03-15,True,Australian (Singapore Work Pass Holder),Robertson Quay,United States,"Robertson Quay, Singapore",1.2916428,103.8375112
+233,61,M,NCID,2020-03-16,True,British (Singapore Long Term Pass),East Coast Road,"UK, Parkway East Hospital","E Coast Rd, Singapore",1.3090566,103.9126906
+234,86,M,SGH,2020-03-16,False,Singapore Citizen,Telok Blangah Heights,Bukit Merah Polyclinic,"Telok Blangah Heights, Singapore",1.2766698,103.8114559
+235,31,F,SGH,2020-03-16,False,Singapore Citizen,Bukit Batok West Avenue 8,SGH Staff Clinic,"Bukit Batok West Ave 8, Singapore",1.3521508,103.7395213
+236,30,F,NCID,2020-03-16,False,Singapore Citizen,Bishan Street 22,,"Bishan Street 22, Singapore",1.3573661,103.8452482
+237,36,F,NCID,2020-03-16,False,Indonesian (Singapore Work Pass Holder),Beach Road,,"Beach Rd, Singapore",1.2991589,103.8589325
+238,83,F,NCID,2020-03-16,True,Belgium,Jalan Besar,Raffles Hospital,"Jln Besar, Singapore",1.3085035,103.8573175
+239,28,M,NCID,2020-03-16,True,British (Singapore Work Pass Holder),Cairnhill Rise,France,"Cairnhill Rise, Singapore",1.3071175,103.839238
+240,27,M,NUH,2020-03-16,True,Singapore Permanent Resident,Kim Keat Road,Spain,"Kim Keat Rd, Singapore",1.3252133,103.8536728
+241,28,M,NCID,2020-03-16,True,British (Singapore Work Pass Holder),Cairnhill Road,France,"Cairnhill Rd, Singapore",1.3067162,103.8373289
+242,64,F,NCID,2020-03-16,False,Singapore Citizen,Gangsa Road,Malaysia,"Gangsa Rd, Singapore",1.3778066,103.7663345
+243,36,M,NCID,2020-03-16,True,Singapore Citizen,Havelock Road,"Germany, Italy, Switzerland, River Valley Road","Havelock Rd, Singapore",1.2890324,103.8359869
+244,53,M,NCID,2020-03-16,True,Singapore Citizen,Alexandra Road,River Valley Road,"Alexandra Rd, Singapore",1.2884712,103.8055757
+245,76,M,SGH,2020-03-16,False,Singapore Citizen,Boon Lay Drive,Marina One West Tower (9 Straits View),"Boon Lay Dr, Singapore",1.3437874,103.7127992
+246,39,M,SGH,2020-03-16,True,Canadian,Tanjong Pagar,"Japan, Singtel Comcentre (31 Exeter Road)","Tanjong Pagar, Singapore",1.2780299,103.8404472
+247,41,M,NCID,2020-03-16,True,Singapore Citizen,Tampines Avenue 8,"UK, France","Tampines Ave 8, Singapore",1.352507,103.9304399
+248,23,F,NCID,2020-03-17,False,Malaysian (Singapore Work Pass Holder),,Malaysia,,,
+249,42,M,NCID,2020-03-17,True,Singapore Permanent Resident,,USA,,,
+250,28,M,NCID,2020-03-17,True,British (Singapore Work Pass Holder),,"UK, Austria",,,
+251,59,F,NCID,2020-03-17,False,Singapore Citizen,,,,,
+252,66,M,NCID,2020-03-17,False,Singapore Citizen,,Malaysia,,,
+253,24,M,NCID,2020-03-17,True,Singapore Citizen,,Spain,,,
+254,43,F,NCID,2020-03-17,True,Singapore Permanent Resident,,France,,,
+255,44,M,NCID,2020-03-17,True,Swedish (Singapore Work Pass holder),,"Norway, Denmark, Sweden",,,
+256,32,F,NCID,2020-03-17,False,Filipino (Singapore Work Pass holder),,,,,
+257,19,M,NUH,2020-03-17,True,French (Singapore Long Term Pass holder),,UK,,,
+258,47,M,NCID,2020-03-17,True,Indian,,Europe,,,
+259,30,F,NCID,2020-03-17,True,Singapore Citizen,,Philippines,,,
+260,48,F,Farrer Park Hospital,2020-03-17,False,Singapore Permanent Resident,,,,,
+261,30,M,NCID,2020-03-17,True,American (Singapore Work Pass Holder),,"USA, France",,,
+262,20,F,NCID,2020-03-17,True,Indonesian,,UK,,,
+263,52,F,NCID,2020-03-17,True,Singapore Citizen,,"Spain, Portugal",,,
+264,41,F,NCID,2020-03-17,True,Indonesian,,Indonesia,,,
+265,25,F,NCID,2020-03-17,True,Singapore Citizen,,UK,,,
+266,63,M,NCID,2020-03-17,True,Singapore Citizen,,"Spain, Portugal",,,
+267,72,F,KTPH,2020-03-17,True,Singapore Citizen,,Indonesia,,,
+268,64,M,NCID,2020-03-17,True,British,,"Switzerland, UK",,,
+269,19,F,NCID,2020-03-17,True,Singapore Citizen,,UK,,,
+270,62,F,NTFGH,2020-03-17,True,Singapore Citizen,,"Croatia, Bosnia, Serbia, Slovenia, Austria",,,
+271,29,M,NTFGH,2020-03-17,True,Singapore Citizen,,UK,,,
+272,65,M,NTFGH,2020-03-17,True,Singapore Citizen,,Eastern Europe,,,
+273,69,M,NUH,2020-03-17,False,Singapore Citizen,,Singapore,,,
+274,50,M,NCID,2020-03-17,True,American (Singapore Work Pass Holder),,USA,,,
+275,27,M,NTFGH,2020-03-17,False,Singapore Citizen,,Singapore,,,
+276,21,M,NTFGH,2020-03-17,True,Singapore Citizen,,UK,,,
+277,55,M,CGH,2020-03-17,True,Singapore Citizen,,USA,,,
+278,48,F,NCID,2020-03-17,True,American,,"Switzerland, US",,,
+279,71,M,NCID,2020-03-17,True,Singapore Citizen,,Philippines,,,
+280,21,F,NCID,2020-03-17,True,Singapore Citizen,,UK,,,
+281,46,M,NCID,2020-03-17,True,Singapore Citizen,,"USA, Canada",,,
+282,76,M,NCID,2020-03-17,True,Swiss,,France,,,
+283,62,F,NCID,2020-03-17,False,Singapore Citizen,,Malaysia,,,
+284,32,M,NCID,2020-03-17,True,Singapore Citizen,,USA,,,
+285,42,F,NCID,2020-03-17,True,Thai (Singapore Work Pass Holder),,Thailand,,,
+286,54,M,NCID,2020-03-17,True,British (Singapore Work Pass Holder),,UK,,,
+287,26,M,KTPH,2020-03-17,False,Singapore Citizen,,Singapore,,,
+288,71,M,NCID,2020-03-18,False,Singapore Citizen,,Malaysia,,,
+289,62,M,NCID,2020-03-18,False,Singapore Citizen,,Singapore,,,
+290,69,M,NCID,2020-03-18,False,Singapore Citizen,,Singapore,,,
+291,52,M,NCID,2020-03-18,False,Indian (Singapore Long Term Pass Holder),,Singapore,,,
+292,64,F,NCID,2020-03-18,True,Singapore Citizen,,Turkey,,,
+293,30,M,NCID,2020-03-18,True,British (Singapore Work Pass Holder),,UK,,,
+294,58,F,NCID,2020-03-18,False,Singapore Permanent Resident,,Indonesia,,,
+295,55,M,NCID,2020-03-18,True,Singapore Citizen,,USA,,,
+296,25,F,NCID,2020-03-18,True,Malaysian (Singapore Work Pass Holder),,UK,,,
+297,31,M,NCID,2020-03-18,True,Indonesian (Singapore Work Pass Holder),,Indonesia,,,
+298,44,M,NCID,2020-03-18,True,Singapore Citizen,,India,,,
+299,29,M,NCID,2020-03-18,True,Singapore Citizen,,Philippines,,,
+300,28,M,NCID,2020-03-18,True,German (Singapore Work Pass Holder),,"Switzerland, Austria",,,
+301,63,M,NCID,2020-03-18,True,Singapore Citizen,,"Austria, Switzerland",,,
+302,49,F,KTPH,2020-03-18,False,Singapore Citizen,,Singapore,,,
+303,27,M,NCID,2020-03-18,False,Malaysian (Singapore Long Term Pass Holder),,Malaysia,,,
+304,27,F,NCID,2020-03-18,True,Singapore Citizen,,"UK, Switzerland, Austria",,,
+305,24,M,NCID,2020-03-18,False,Singapore Citizen,,Singapore,,,
+306,56,M,NCID,2020-03-18,True,Singapore Citizen,,UK,,,
+307,22,F,NCID,2020-03-18,True,Singapore Citizen,,Philippines,,,
+308,59,M,NCID,2020-03-18,True,Singapore Citizen,,USA,,,
+309,60,M,NCID,2020-03-18,True,Singapore Citizen,,"Croatia, Austria",,,
+310,58,M,NCID,2020-03-18,False,Singapore Citizen,,Singapore,,,
+311,80,F,NCID,2020-03-18,False,Singapore Citizen,,Singapore,,,
+312,30,M,NCID,2020-03-18,True,French,,"France, Germany",,,
+313,39,M,NCID,2020-03-18,True,British (Singapore Work Pass Holder),,UK,,,
+314,58,M,KTPH,2020-03-18,False,Singapore Citizen,,,,,
+315,57,M,NTFGH,2020-03-18,True,Singapore Citizen,,UK,,,
+316,25,M,CGH,2020-03-18,True,Malaysia (Singapore Work Pass Holder),,Malaysia,,,
+317,29,M,SKH,2020-03-18,True,Singapore Citizen,,UK,,,
+318,58,F,SKH,2020-03-18,False,China (Singapore Long Term Pass Holder),,,,,
+319,67,F,SKH,2020-03-18,True,Philippines (Singapore Work Pass Holder),,Phillippines,,,
+320,34,M,NCID,2020-03-18,True,Singapore Permanent Resident,,UK,,,
+321,65,F,NUH,2020-03-18,False,Singapore Citizen,,,,,
+322,46,F,AH,2020-03-18,True,Singapore Permanent Resident,,"Switzerland, France",,,
+323,24,M,NCID,2020-03-18,True,Singapore Citizen,,UK,,,
+324,45,M,NCID,2020-03-18,True,Brazil (Singapore Work Pass Holder),,UK,,,
+325,38,M,NCID,2020-03-19,True,Philippines (Singapore Work Pass Holder),,UK,,,
+326,33,M,NCID,2020-03-19,True,Singapore Citizen,,"UK, Netherlands",,,
+327,38,F,NCID,2020-03-19,True,Singapore Citizen,,"Switzerland, Italy, Austria, Germany",,,
+328,63,F,NCID,2020-03-19,True,Singapore Permanent Resident,,"UK, Switzerland",,,
+329,64,M,NCID,2020-03-19,True,Singapore Citizen,,Turkey,,,
+330,67,M,NCID,2020-03-19,False,Singapore Citizen,,,,,
+331,49,F,NCID,2020-03-19,True,Singapore Permanent Resident,,UK,,,
+332,36,F,NCID,2020-03-19,True,US (Singapore Long Term Pass Holder),,UK,,,
+333,48,M,NCID,2020-03-19,True,Columbia (Singapore Long Term Pass Holder),,US,,,
+334,32,F,NCID,2020-03-19,True,Singapore Citizen,,US,,,
+335,57,M,NCID,2020-03-19,False,Singapore Citizen,,,,,
+336,60,M,KTPH,2020-03-19,False,Singapore Citizen,,,,,
+337,31,M,NUH,2020-03-19,True,Switzerland (Singapore Work Pass Holder),,"France, Switzerland",,,
+338,57,M,NCID,2020-03-19,False,Singapore Citizen,,,,,
+339,66,M,NCID,2020-03-19,True,Singapore Citizen,,Philippines,,,
+340,27,M,NCID,2020-03-19,True,Singapore Citizen,,Philippines,,,
+341,31,M,NCID,2020-03-19,True,Germany (Singapore Work Pass Holder),,UK,,,
+342,31,M,NCID,2020-03-19,True,Singapore Citizen,,Thailand,,,
+343,20,F,NCID,2020-03-19,True,Singapore Permanent Resident,,UK,,,
+344,21,F,NCID,2020-03-19,True,Singapore Citizen,,UK,,,
+345,30,M,NCID,2020-03-19,False,German (Singapore Work Pass Holder),,UK,,,
