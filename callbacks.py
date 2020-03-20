@@ -29,7 +29,7 @@ ctx = dash.callback_context
 
 # Read Cases
 df = pd.read_sql_query('SELECT * FROM cases', connection)
-df['is_imported'] = df['is_imported'].apply(lambda x: True if x == '1' else False)
+df['is_imported'] = df['is_imported'].apply(lambda x: True if x == 1 else False)
 
 # Change is_imported to Origin
 df['origin'] = df['is_imported'].apply(lambda x: 'Imported' if x is True else 'Local')
